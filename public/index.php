@@ -15,17 +15,16 @@
             <h1 id="nav-logo"></h1>
             <nav>
                 <ul>
-                    <li><a href="Intro"></a></li>
-                    <li><a href="Services"></a></li>
-                    <li><a href="Gallery"></a></li>
-                    <li><a href="Testimonials"></a></li>
-                    <li><a href="Contact"></a></li>
+                    <li><a href="#intro-section">Intro</a></li>
+                    <li><a href="#services-section">Services</a></li>
+                    <li><a href="#gallery-section">Gallery</a></li>
+                    <li><a href="#testimonials-section">Testimonials</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </div>
 
-    <!-- Sections -->
     <section id="intro-section">
 
     </section>
