@@ -10,6 +10,47 @@
 
 <body>
 
+    <div id="navbar">
+        <div class="container flex">
+            <h1 id="nav-logo"></h1>
+            <nav>
+                <ul>
+                    <li><a href="Intro"></a></li>
+                    <li><a href="Services"></a></li>
+                    <li><a href="Gallery"></a></li>
+                    <li><a href="Testimonials"></a></li>
+                    <li><a href="Contact"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Sections -->
+    <section id="intro-section">
+
+    </section>
+
+    <section id="services-section">
+
+    </section>
+
+    <section id="gallery-section">
+
+    </section>
+
+    <section id="testimonials-section">
+
+    </section>
+
+    <section id="contact-section">
+
+    </section>
+
+    <footer>
+
+    </footer>
+
+
 </body>
 
 </html>
