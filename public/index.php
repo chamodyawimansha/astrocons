@@ -16,33 +16,33 @@
             <h1 id="nav-logo"></h1>
             <nav>
                 <ul>
-                    <li><a href="#intro-section">Intro</a></li>
-                    <li><a href="#services-section">Services</a></li>
-                    <li><a href="#gallery-section">Gallery</a></li>
-                    <li><a href="#testimonials-section">Testimonials</a></li>
-                    <li><a href="#contact-section">Contact</a></li>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </div>
 
-    <section id="intro-section">
+    <section id="intro">
 
     </section>
 
-    <section id="services-section">
+    <section id="services">
 
     </section>
 
-    <section id="gallery-section">
+    <section id="gallery">
 
     </section>
 
-    <section id="testimonials-section">
+    <section id="testimonials">
 
     </section>
 
-    <section id="contact-section">
+    <section id="contact">
 
     </section>
 
