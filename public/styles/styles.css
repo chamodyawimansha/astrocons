@@ -60,6 +60,8 @@ a {
 #navbar {
   background-color: var(--dark-color);
   height: 75px;
+  position: fixed;
+  width: 100%;
 }
 
 #nav-logo a {
@@ -79,6 +81,7 @@ a {
 }
 
 #navbar ul a {
+  font-family: var(--title-font), sans-serif;
   color: var(--primary-color);
   font-size: 1.1rem;
   text-transform: uppercase;
