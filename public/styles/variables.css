@@ -3,4 +3,9 @@
   --dark-color: #272727;
   --light-color: #a1a1a1;
   --secondary-color: #ff652f;
+  --title-font: "Heebo";
+  --paragraph-font: "Playfair Display";
 }
+
+/* font-family: 'Heebo', sans-serif;
+font-family: 'Playfair Display', serif; */
