@@ -1,3 +1,6 @@
+@import url("variables.css");
+@import url("utilities.css");
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -32,4 +35,57 @@ ul {
 img {
   max-width: 100%;
   height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Heebo", sans-serif;
+}
+
+p {
+  font-family: "Playfair Display", serif;
+}
+
+a {
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation */
+#navbar {
+  background-color: var(--dark-color);
+  height: 75px;
+}
+
+#nav-logo {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#navbar .flex {
+  justify-content: space-between;
+}
+
+#navbar nav ul {
+  display: flex;
+}
+
+#navbar ul a {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 20px 10px;
+}
+
+#navbar ul a:hover {
+  background-color: var(--primary-color);
+  color: var(--dark-color);
 }
