@@ -15,9 +15,9 @@
 
     <div id="navbar">
         <div class="container flex">
-            <h1 id="nav-logo">Astrocon</h1>
+            <h1 id="nav-logo" class="select-off"><a href="/">Astrocon</a></h1>
             <nav>
-                <ul>
+                <ul class="select-off">
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#gallery">Gallery</a></li>
