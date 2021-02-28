@@ -219,6 +219,10 @@ section {
   min-height: 400px;
 }
 
+.services-card:hover h3::before {
+  background-color: var(--primary-color);
+}
+
 .services-card:hover {
   cursor: pointer;
 }
