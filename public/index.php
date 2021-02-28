@@ -53,10 +53,31 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora natus earum adipisci rerum aut
                         nihil delectus eligendi excepturi blanditiis eveniet pariatur rem esse temporibus veritatis
                         maxime, soluta placeat nesciunt? Perferendis!</p>
-
                 </div>
                 <div class="services-head-image">
                     <img src="images/description-square.jpg" alt="">
+                </div>
+            </div>
+            <div class="services-cards">
+                <div class="services-card">
+                    <h3>Painting and Decorating</h3>
+                    <img src="images/painting.jpg" alt="Paining Image">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque tenetur tempore corrupti aut laborum, saepe ea. Illum, modi. Provident, voluptatibus!</p>
+                </div>
+                <div class="services-card">
+                    <h3>Masonry</h3>
+                    <img src="images/masonry.jpg" alt="Brick Wall with cement exposed">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore a eos doloribus, praesentium neque repellendus. Laboriosam autem similique iure exercitationem.</p>
+                </div>
+                <div class="services-card">
+                    <h3>Plumbing</h3>
+                    <img src="images/plumbing.jpg" alt="Water Pipes">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae fugit voluptatem nulla unde voluptatum deleniti quisquam, maxime illo provident deserunt!</p>
+                </div>
+                <div class="services-card">
+                    <h3>Wiring</h3>
+                    <img src="images/wiring.jpg" alt="Electrical Wires">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae maiores iste, velit sit non dolores reiciendis tempora soluta incidunt rem?</p>
                 </div>
             </div>
         </div>

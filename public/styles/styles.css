@@ -175,7 +175,7 @@ section {
 
 .services-description {
   font-family: var(--title-font), sans-serif;
-  padding: 0 50px 50px;
+  /* padding: 0 50px 50px; */
   height: 100%;
 }
 
@@ -206,4 +206,47 @@ section {
 
 .services-head-image img {
   width: 100%;
+}
+
+.services-cards {
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  justify-content: space-around;
+}
+
+.services-card {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  width: 250px;
+  min-height: 400px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.103);
+  border-radius: 10px;
+}
+
+.services-card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.services-card h3 {
+  font-family: var(--title-font), sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 15px 5px;
+  background-color: var(--dark-color);
+  color: var(--primary-color);
+}
+
+.services-card img {
+  width: 100%;
+}
+
+.services-card p {
+  font-family: var(--title-font), sans-serif;
+  padding: 10px;
+  text-align: justify;
 }
