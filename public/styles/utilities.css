@@ -15,6 +15,6 @@
 .flex {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /*vertical center*/
   height: 100%;
 }

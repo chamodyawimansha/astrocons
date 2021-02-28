@@ -29,7 +29,12 @@
     </div>
 
     <section id="intro">
-        <div class="overlay"></div>
+        <div class="overlay flex">
+            <div class="">
+                <h1 id="intro-title">Astro Constructions.</h1>
+                <p id="intro-subtitle">Design and Build Building Contractors London</p>
+            </div>
+        </div>
     </section>
 
     <section id="services">

@@ -102,10 +102,29 @@ section {
 #intro {
   background-image: url(../images/intro-background.jpg);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
 #intro .overlay {
   min-height: 100vh;
   width: 100%;
-  background-color: #27272770;
+  background-color: #27272793;
+}
+
+#intro-title {
+  font-size: 4rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-family: var(--title-font), sans-serif;
+}
+
+#intro-subtitle {
+  font-size: 1.5rem;
+  font-family: var(--title-font), sans-serif;
+  background: var(--primary-color);
+  color: var(--dark-color);
+  padding: 5px;
+  font-weight: bold;
 }
