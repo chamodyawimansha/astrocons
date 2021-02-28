@@ -132,6 +132,7 @@ section {
 
 .intro-more {
   padding-top: 100px;
+  display: inline-block;
 }
 
 .intro-more img {

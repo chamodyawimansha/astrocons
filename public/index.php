@@ -33,11 +33,9 @@
             <div class="select-off">
                 <h1 class="intro-title">Astro Constructions.</h1>
                 <p class="intro-subtitle">Design and Build Building Contractors in London</p>
-                <div class="intro-more">
-                    <a href="#services">
-                        <img src="images/icons/arrow-down.svg" alt="arrow down">
-                    </a>
-                </div>
+                <a href="#services" class="intro-more">
+                    <img src="images/icons/arrow-down.svg" alt="arrow down">
+                </a>
             </div>
         </div>
     </section>
