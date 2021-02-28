@@ -29,7 +29,7 @@
     </div>
 
     <section id="intro">
-
+        <div class="overlay"></div>
     </section>
 
     <section id="services">

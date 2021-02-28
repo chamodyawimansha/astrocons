@@ -56,6 +56,10 @@ a {
   color: inherit;
 }
 
+section {
+  min-height: 100vh;
+}
+
 /* Navigation */
 #navbar {
   background-color: var(--dark-color);
@@ -92,4 +96,16 @@ a {
 #navbar ul a:hover {
   background-color: var(--primary-color);
   color: var(--dark-color);
+}
+
+/* Intro section */
+#intro {
+  background-image: url(../images/intro-background.jpg);
+  background-size: cover;
+}
+
+#intro .overlay {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #27272770;
 }
