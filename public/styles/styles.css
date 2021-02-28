@@ -156,3 +156,54 @@ section {
     transform: translateY(0);
   }
 }
+
+/* Services Section */
+
+#services {
+  background-color: var(--light-color);
+  padding-top: 75px;
+}
+
+.services-heading {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.services-description {
+  font-family: var(--title-font), sans-serif;
+  padding: 0 50px 50px;
+  height: 100%;
+}
+
+.services-description *:first-child {
+  font-family: var(--title-font), sans-serif;
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.services-description h2 {
+  color: var(--primary-color);
+  background-color: var(--dark-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+.services-description p {
+  font-family: var(--title-font), sans-serif;
+  color: var(--dark-color);
+  font-size: 1rem;
+}
+
+.services-head-image img {
+  width: 100%;
+}

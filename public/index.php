@@ -41,7 +41,25 @@
     </section>
 
     <section id="services">
+        <div class="container">
+            <div class="services-heading">
+                <div class="services-description">
+                    <p>Services</p>
+                    <h2>We offer some of the best services in the town for a reasonable price!</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora natus earum adipisci rerum aut
+                        nihil delectus eligendi excepturi blanditiis eveniet pariatur rem esse temporibus veritatis
+                        maxime, soluta placeat nesciunt? Perferendis!</p>
 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora natus earum adipisci rerum aut
+                        nihil delectus eligendi excepturi blanditiis eveniet pariatur rem esse temporibus veritatis
+                        maxime, soluta placeat nesciunt? Perferendis!</p>
+
+                </div>
+                <div class="services-head-image">
+                    <img src="images/description-square.jpg" alt="">
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="gallery">
