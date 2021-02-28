@@ -30,9 +30,14 @@
 
     <section id="intro">
         <div class="overlay flex">
-            <div class="">
-                <h1 id="intro-title">Astro Constructions.</h1>
-                <p id="intro-subtitle">Design and Build Building Contractors London</p>
+            <div class="select-off">
+                <h1 class="intro-title">Astro Constructions.</h1>
+                <p class="intro-subtitle">Design and Build Building Contractors in London</p>
+                <div class="intro-more">
+                    <a href="#services">
+                        <img src="images/icons/arrow-down.svg" alt="arrow down">
+                    </a>
+                </div>
             </div>
         </div>
     </section>
