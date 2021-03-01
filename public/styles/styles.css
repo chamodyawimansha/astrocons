@@ -279,8 +279,53 @@ section {
 #contact {
   padding-top: 75px;
   background-color: var(--dark-color);
+  color: var(--light-color);
+  line-height: 2rem;
 }
 
 #contact h2 {
   color: var(--primary-color);
+}
+
+.contact-address,
+.contact-phone,
+.contact-email {
+  position: relative;
+}
+
+.contact-phone,
+.contact-email {
+  display: inline-block;
+  margin-right: 20px;
+}
+.contact-address object {
+  position: absolute;
+}
+
+.contact-phone object {
+  position: absolute;
+  top: 8px;
+}
+
+.contact-email object {
+  position: absolute;
+  top: 8px;
+}
+
+.contact-address address,
+.contact-phone p,
+.contact-email p {
+  margin-left: 25px;
+}
+
+.contact-details > p {
+  margin: 20px auto 40px;
+}
+
+.social-icons > p {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: var(--title-font), sans-serif;
+  margin: 40px 0 20px;
 }

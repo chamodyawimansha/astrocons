@@ -115,10 +115,40 @@
     <section id="contact">
         <div class="container">
             <p class="section-description">Contact</p>
+            <div class="grid">
+                <div class="contact-details">
+                    <h2>Get in touch with us!</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis labore quae in quas dolores
+                        incidunt id eligendi modi atque odio! Eius exercitationem esse officiis sunt dolorum at doloremque
+                        perspiciatis quibusdam!</p>
+                    <div class="contact-address">
+                        <object data="images/icons/map-pin.svg" alt="" width="20px"> </object>
+                        <address>Room 67, 14 Tottenham Court Road, London, England, W1T 1JY.
+                        </address>
+                    </div>
+                    <div class="contact-phone">
+                        <object data="images/icons/phone.svg" alt="" width="20px"> </object>
+                        <p>+44 77-334-345</p>
+                    </div>
+                    <div class="contact-email">
+                        <object data="images/icons/email.svg" alt="" width="20px"> </object>
+                        <p>contact@astrocon.co.uk</p>
+                    </div>
 
-            <div>
-                <h2>Get in touch with us!</h2>
-
+                    <div class="social-icons">
+                        <p>Follow us on Social media.</p>
+                        <a href=""><object data="images/icons/facebook.svg" alt="facebook icon" width="30px"></object></a>
+                        <a href=""><object data="images/icons/twitter.svg" alt="twitter icon" width="30px"></object></a>
+                        <a href=""><object data="images/icons/instagram.svg" alt="instagram icon" width="30px"></object></a>
+                        <a href=""><object data="images/icons/linkedin.svg" alt="linkedin icon" width="30px"></object></a>
+                        <a href=""><object data="images/icons/youtube.svg" alt="youtube icon" width="30px"></object></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="">
+                        <input type="text">
+                    </form>
+                </div>
             </div>
 
         </div>
