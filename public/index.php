@@ -89,7 +89,10 @@
     <section id="projects">
         <div class="container">
             <p class="section-description">Projects</p>
-            <h3 class="projects-title">Some of our best Projects.</h3>
+            <h2>Some of our best Projects.</h2>
+            <div class="project-images">
+                <img src="images/projects/project-image-1-sm.jpg" alt="Project Image 1">
+            </div>
         </div>
     </section>
 
