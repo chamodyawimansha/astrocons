@@ -193,6 +193,7 @@ section {
   font-weight: bold;
   font-size: 1.5rem;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .services-description p {
@@ -242,13 +243,29 @@ section {
   color: var(--text-color);
 }
 
+/* PROJECTS Section */
+
 #projects {
   padding-top: 75px;
 }
 
-.projects-title {
-  color: var(--primary-color);
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--text-color);
+.project-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.project-images img {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.project-images img:hover {
+  cursor: pointer;
+  transform: scale(0.98);
+}
+
+.project-images img:active {
+  transform: scale(0.9);
 }

@@ -99,7 +99,11 @@
                 <img src="images/projects/project-image-6-sm.jpg" alt="Project Image 6">
                 <img src="images/projects/project-image-7-sm.jpg" alt="Project Image 7">
                 <img src="images/projects/project-image-8-sm.jpg" alt="Project Image 8">
-                <img src="images/projects/project-image-9-sm.jpg" alt="Project Image 9">
+
+                <img src="images/projects/project-image-4-sm.jpg" alt="Project Image 9">
+                <img src="images/projects/project-image-5-sm.jpg" alt="Project Image 10">
+                <img src="images/projects/project-image-6-sm.jpg" alt="Project Image 11">
+                <img src="images/projects/project-image-7-sm.jpg" alt="Project Image 12">
             </div>
         </div>
     </section>
