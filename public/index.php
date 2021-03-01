@@ -20,7 +20,7 @@
                 <ul class="select-off">
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#gallery">Projects</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
