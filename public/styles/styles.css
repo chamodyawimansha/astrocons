@@ -188,18 +188,17 @@ section {
 }
 
 .services-description h2 {
-  color: var(--primary-color);
-  background-color: var(--dark-color);
+  color: var(--text-color);
   font-weight: bold;
   font-size: 1.5rem;
   margin-bottom: 15px;
   text-transform: uppercase;
-  padding: 20px;
+  /* padding: 20; */
 }
 
 .services-description p {
   font-family: var(--title-font), sans-serif;
-  color: var(--dark-color);
+  color: var(--text-color);
   line-height: 2rem;
 }
 
@@ -219,21 +218,8 @@ section {
   min-height: 400px;
 }
 
-.services-card:hover h3::before {
-  background-color: var(--primary-color);
-}
-
 .services-card:hover {
   cursor: pointer;
-}
-
-.services-card h3::before {
-  content: "";
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  background-color: var(--secondary-color);
-  margin-right: 5px;
 }
 
 .services-card h3 {
@@ -242,17 +228,21 @@ section {
   font-weight: bold;
   font-size: 1rem;
   padding: 0 0 10px;
-  color: var(--dark-color);
+  color: var(--text-color);
   display: inline-block;
 }
 
 .services-card img {
   width: 100%;
+  margin-bottom: 5px;
 }
 
 .services-card p {
   font-family: var(--title-font), sans-serif;
-  padding: 10px;
   line-height: 1.7rem;
-  color: var(--dark-color);
+  color: var(--text-color);
+}
+
+#gallery {
+  background-color: var(--dark-color);
 }
