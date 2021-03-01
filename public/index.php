@@ -20,7 +20,7 @@
                 <ul class="select-off">
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#gallery">Projects</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -44,7 +44,7 @@
         <div class="container">
             <div class="services-heading">
                 <div class="services-description">
-                    <p>Services</p>
+                    <p class="section-title">Services</p>
                     <h2>We offer some of the best services in the town for a reasonable price!</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora natus earum adipisci rerum aut
                         nihil delectus eligendi excepturi blanditiis eveniet pariatur rem esse temporibus veritatis
@@ -86,7 +86,7 @@
         </div>
     </section>
 
-    <section id="gallery">
+    <section id="projects">
 
     </section>
 
