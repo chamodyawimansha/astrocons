@@ -92,6 +92,14 @@
             <h2>Some of our best Projects.</h2>
             <div class="project-images">
                 <img src="images/projects/project-image-1-sm.jpg" alt="Project Image 1">
+                <img src="images/projects/project-image-2-sm.jpg" alt="Project Image 2">
+                <img src="images/projects/project-image-3-sm.jpg" alt="Project Image 3">
+                <img src="images/projects/project-image-4-sm.jpg" alt="Project Image 4">
+                <img src="images/projects/project-image-5-sm.jpg" alt="Project Image 5">
+                <img src="images/projects/project-image-6-sm.jpg" alt="Project Image 6">
+                <img src="images/projects/project-image-7-sm.jpg" alt="Project Image 7">
+                <img src="images/projects/project-image-8-sm.jpg" alt="Project Image 8">
+                <img src="images/projects/project-image-9-sm.jpg" alt="Project Image 9">
             </div>
         </div>
     </section>
