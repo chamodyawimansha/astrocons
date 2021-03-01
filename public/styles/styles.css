@@ -165,7 +165,7 @@ section {
 }
 
 .services-heading {
-  margin-top: 25px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -178,12 +178,12 @@ section {
   height: 100%;
 }
 
-.services-description *:first-child {
+.section-description {
   font-family: var(--title-font), sans-serif;
   color: var(--secondary-color);
   font-weight: bold;
   font-size: 1.2rem;
-  margin-bottom: 15px;
+  margin-top: 25px;
   text-transform: uppercase;
 }
 
@@ -243,6 +243,13 @@ section {
   color: var(--text-color);
 }
 
-#gallery {
-  background-color: var(--dark-color);
+#projects {
+  padding-top: 75px;
+}
+
+.projects-title {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
 }

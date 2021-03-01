@@ -42,9 +42,9 @@
 
     <section id="services">
         <div class="container">
+            <p class="section-description">Services</p>
             <div class="services-heading">
                 <div class="services-description">
-                    <p class="section-title">Services</p>
                     <h2>We offer some of the best services in the town for a reasonable price!</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora natus earum adipisci rerum aut
                         nihil delectus eligendi excepturi blanditiis eveniet pariatur rem esse temporibus veritatis
@@ -87,7 +87,10 @@
     </section>
 
     <section id="projects">
-
+        <div class="container">
+            <p class="section-description">Projects</p>
+            <h3 class="projects-title">Some of our best Projects.</h3>
+        </div>
     </section>
 
     <section id="testimonials">
