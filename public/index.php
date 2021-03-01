@@ -113,7 +113,15 @@
     </section>
 
     <section id="contact">
+        <div class="container">
+            <p class="section-description">Contact</p>
 
+            <div>
+                <h2>Get in touch with us!</h2>
+
+            </div>
+
+        </div>
     </section>
 
     <footer>
