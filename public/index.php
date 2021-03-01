@@ -88,9 +88,9 @@
 
     <section id="gallery">
         <div class="container">
-            <p class="section-description">Projects</p>
+            <p class="section-description">Gallery</p>
             <h2>Some of our best Work.</h2>
-            <div class="project-images">
+            <div class="gallery-images">
                 <img src="images/projects/project-image-1-sm.jpg" alt="Project Image 1">
                 <img src="images/projects/project-image-2-sm.jpg" alt="Project Image 2">
                 <img src="images/projects/project-image-3-sm.jpg" alt="Project Image 3">
