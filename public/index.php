@@ -20,7 +20,7 @@
                 <ul class="select-off">
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -86,10 +86,10 @@
         </div>
     </section>
 
-    <section id="projects">
+    <section id="gallery">
         <div class="container">
             <p class="section-description">Projects</p>
-            <h2>Some of our best Projects.</h2>
+            <h2>Some of our best Work.</h2>
             <div class="project-images">
                 <img src="images/projects/project-image-1-sm.jpg" alt="Project Image 1">
                 <img src="images/projects/project-image-2-sm.jpg" alt="Project Image 2">
