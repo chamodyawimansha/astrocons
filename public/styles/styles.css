@@ -204,6 +204,7 @@ section {
 
 .services-head-image img {
   width: 100%;
+  filter: var(--image-brightness);
 }
 
 .services-cards {
@@ -235,6 +236,7 @@ section {
 .services-card img {
   width: 100%;
   margin-bottom: 5px;
+  filter: var(--image-brightness);
 }
 
 .services-card p {
@@ -259,6 +261,7 @@ section {
   width: 100%;
   height: 100%;
   transition: 0.3s;
+  filter: var(--image-brightness);
 }
 
 .project-images img:hover {

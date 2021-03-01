@@ -6,6 +6,7 @@
   --text-color: #525252;
   --title-font: "Heebo";
   --paragraph-font: "Playfair Display";
+  --image-brightness: brightness(85%);
 }
 
 /* font-family: 'Heebo', sans-serif;
