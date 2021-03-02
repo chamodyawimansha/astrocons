@@ -16,15 +16,6 @@
     <div id="navbar">
         <div class="container flex">
             <h1 id="nav-logo" class="select-off"><a href="/">Astrocons</a></h1>
-            <nav>
-                <ul class="select-off">
-                    <li><a href="#intro">Intro</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
         </div>
     </div>
 
