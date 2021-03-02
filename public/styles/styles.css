@@ -43,15 +43,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--title-font);
+  font-family: "Heebo", sans-serif;
 }
 
 p {
-  font-family: var(--paragraph-font);
+  font-family: "Lato", sans-serif;
 }
 
 a {
-  font-family: var(--paragraph-font);
+  font-family: "Lato", sans-serif;
   text-decoration: none;
   color: inherit;
 }
