@@ -150,6 +150,7 @@
                         <input type="text" name="name" placeholder="Name">
                         <input type="email" name="email" placeholder="Email">
                         <textarea name="message" placeholder="Your Message"></textarea>
+                        <input type="submit" class="submit-button" value="Send">
                     </form>
                 </div>
             </div>
