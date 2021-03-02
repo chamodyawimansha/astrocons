@@ -4,8 +4,8 @@
   --light-color: #f0f0f0;
   --secondary-color: #ff652f;
   --text-color: #525252;
-  --title-font: "Heebo";
-  --paragraph-font: "Cabin";
+  --title-font: "Heebo", sans-serif;
+  --paragraph-font: "Cabin", serif;
   --image-brightness: brightness(85%);
 }
 
