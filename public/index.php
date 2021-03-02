@@ -128,11 +128,12 @@
                     </div>
                     <div class="contact-phone">
                         <object data="images/icons/phone.svg" alt="" width="20px"> </object>
-                        <p>+44 77-334-345</p>
+                        <p><a href="tel:+4477334345">+44 77-334-345</a>
+                        </p>
                     </div>
                     <div class="contact-email">
                         <object data="images/icons/email.svg" alt="" width="20px"> </object>
-                        <p>contact@astrocon.co.uk</p>
+                        <p> <a href="mailto:contact@astrocon.co.uk" target="_blank">contact@astrocon.co.uk</a></p>
                     </div>
 
                     <div class="social-icons">
