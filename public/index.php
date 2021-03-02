@@ -137,19 +137,26 @@
                     </div>
 
                     <div class="social-icons">
-                        <p>Follow us on Social media.</p>
-                        <a href=""><object data="images/icons/facebook.svg" alt="facebook icon" width="30px"></object></a>
-                        <a href=""><object data="images/icons/twitter.svg" alt="twitter icon" width="30px"></object></a>
-                        <a href=""><object data="images/icons/instagram.svg" alt="instagram icon" width="30px"></object></a>
-                        <a href=""><object data="images/icons/linkedin.svg" alt="linkedin icon" width="30px"></object></a>
-                        <a href=""><object data="images/icons/youtube.svg" alt="youtube icon" width="30px"></object></a>
+                        <h3>Follow us on social media.</h3>
+                        <a href="google.com" target="_blank"><object data="images/icons/facebook.svg" alt="facebook icon" width="30px"></object></a>
+                        <a href="google.com" target="_blank"><object data="images/icons/twitter.svg" alt="twitter icon" width="30px"></object></a>
+                        <a href="google.com" target="_blank"><object data="images/icons/instagram.svg" alt="instagram icon" width="30px"></object></a>
+                        <a href="google.com" target="_blank"><object data="images/icons/linkedin.svg" alt="linkedin icon" width="30px"></object></a>
+                        <a href="google.com" target="_blank"><object data="images/icons/youtube.svg" alt="youtube icon" width="30px"></object></a>
                     </div>
                 </div>
                 <div class="contact-form">
                     <form action="">
-                        <input type="text">
+                        <input type="text" name="name" placeholder="Name">
+                        <input type="email" name="email" placeholder="Email">
+                        <textarea name="message" placeholder="Your Message"></textarea>
                     </form>
                 </div>
+            </div>
+
+            <div class="contact-map">
+                <h3>Locate us on the map.</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317718.69319292053!2d-0.3817765050863085!3d51.528307984912544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2slk!4v1614678653309!5m2!1sen!2slk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
 
         </div>

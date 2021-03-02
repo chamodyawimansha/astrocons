@@ -322,10 +322,43 @@ section {
   margin: 20px auto 40px;
 }
 
-.social-icons > p {
+.social-icons > h3,
+.contact-map > h3 {
   color: var(--primary-color);
   font-size: 1.3rem;
   font-weight: bold;
   font-family: var(--title-font), sans-serif;
   margin: 40px 0 20px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+}
+
+.contact-form {
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  border: 0;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  min-width: 100%;
+  max-width: 630px;
+  min-height: 200px;
+  max-height: 200px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
 }
