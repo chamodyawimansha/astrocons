@@ -164,8 +164,8 @@
     </section>
 
     <footer>
-        <div class="container">
-            <p class="copy-notice">Copyright &copy; 2021 <?php echo date("Y") == "2021" ? "" : "-" . date("Y"); ?> astrocons.co.uk. All Rights Reserved.</p>
+        <div class="container flex">
+            <p class="copy-notice">Copyright &copy; 2021 <?php echo date("Y") == "2021" ? "" : "-" . date("Y"); ?> <a href="astrocons.co.uk">astrocons.co.uk.</a> All Rights Reserved.</p>
             <a href="#intro" class="go-top-btn">Top</a>
         </div>
 

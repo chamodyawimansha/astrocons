@@ -364,3 +364,23 @@ section {
   border: none;
   border-radius: 5px;
 }
+
+/* Footer */
+
+footer {
+  padding: 50px 0;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+footer .flex {
+  justify-content: space-between;
+}
+
+.go-top-btn {
+  padding: 15px;
+  background-color: var(--secondary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
