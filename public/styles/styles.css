@@ -163,7 +163,8 @@ body {
 
 .services-description h2,
 #gallery h2,
-#contact h2 {
+#contact h2,
+#testimonials h2 {
   color: var(--text-color);
   font-weight: bold;
   font-size: 1.5rem;
@@ -245,12 +246,44 @@ body {
   transform: scale(0.9);
 }
 
+/* Testimonials section */
+
+#testimonials {
+  margin: 100px 0;
+  line-height: 2rem;
+}
+
+#testimonials > div *:nth-child(3) {
+  max-width: 1000px;
+  color: var(--text-color);
+}
+
+.testimonial-cards {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 20px;
+}
+.testimonial-cards div {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+}
+
+.testimonial-cards div *:first-child {
+  grid-column: 1 / span 2;
+}
+
+.testimonial-cards img {
+  width: 50%;
+}
+
 /* CONTACT Section */
 #contact {
   background-color: var(--dark-color);
   color: var(--light-color);
   line-height: 2rem;
   margin-top: 50px;
+  padding-top: 50px;
 }
 
 #contact h2 {

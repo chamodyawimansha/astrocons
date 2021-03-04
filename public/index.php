@@ -100,7 +100,35 @@
     </section>
 
     <section id="testimonials">
+        <div class="container">
+            <p class="section-description">Testimonials</p>
+            <h2>Our customer testimonials.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis obcaecati aliquam, earum ipsam eaque, dolor aliquid itaque neque esse hic alias reprehenderit consequuntur tempora iusto, expedita ullam? Non, excepturi ut!</p>
 
+            <div class="testimonial-cards">
+                <div>
+                    <p>Bloody Mary - Photographer</p>
+                    <img src="images/person-1.jpg" alt="Person 1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis laborum provident ipsum,</p>
+                </div>
+                <div>
+                    <p>Baileys Irish- Music Lover</p>
+                    <img src="images/person-2.jpg" alt="Person 2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis laborum provident ipsum, n</p>
+                </div>
+                <div>
+                    <p>Jack Daniel - Owner</p>
+                    <img src="images/person-3.jpg" alt="Person 3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis.</p>
+                </div>
+                <div>
+                    <p>Rémy Martin - Painter</p>
+                    <img src="images/person-4.jpg" alt="Person 3">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis </p>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <section id="contact">
