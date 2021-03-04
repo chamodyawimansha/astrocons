@@ -107,24 +107,19 @@
 
             <div class="testimonial-cards">
                 <div>
-                    <p>Bloody Mary - Photographer</p>
+                    <p><b>Bloody Mary</b> - Photographer</p>
                     <img src="images/person-1.jpg" alt="Person 1">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis laborum provident ipsum,</p>
                 </div>
                 <div>
-                    <p>Baileys Irish- Music Lover</p>
+                    <p><b>Baileys Irish</b> - Music Lover</p>
                     <img src="images/person-2.jpg" alt="Person 2">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis laborum provident ipsum, n</p>
                 </div>
                 <div>
-                    <p>Jack Daniel - Owner</p>
+                    <p><b>Jack Daniel</b> - Owner</p>
                     <img src="images/person-3.jpg" alt="Person 3">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis.</p>
-                </div>
-                <div>
-                    <p>Rémy Martin - Painter</p>
-                    <img src="images/person-4.jpg" alt="Person 3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis </p>
                 </div>
             </div>
 
