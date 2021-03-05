@@ -88,13 +88,12 @@
                 <img src="images/projects/project-image-4-sm.jpg" alt="Project Image 4">
                 <img src="images/projects/project-image-5-sm.jpg" alt="Project Image 5">
                 <img src="images/projects/project-image-6-sm.jpg" alt="Project Image 6">
-                <img src="images/projects/project-image-7-sm.jpg" alt="Project Image 7">
+                <img src="images/projects/project-image-1-sm.jpg" alt="Project Image 7">
                 <img src="images/projects/project-image-8-sm.jpg" alt="Project Image 8">
-
                 <img src="images/projects/project-image-4-sm.jpg" alt="Project Image 9">
                 <img src="images/projects/project-image-5-sm.jpg" alt="Project Image 10">
                 <img src="images/projects/project-image-6-sm.jpg" alt="Project Image 11">
-                <img src="images/projects/project-image-7-sm.jpg" alt="Project Image 12">
+                <img src="images/projects/project-image-3-sm.jpg" alt="Project Image 12">
             </div>
         </div>
     </section>
@@ -129,7 +128,7 @@
     <section id="contact">
         <div class="container">
             <p class="section-description">Contact</p>
-            <div class="grid">
+            <div class="contact-grid">
                 <div class="contact-details">
                     <h2>Get in touch with us!</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis labore quae in quas dolores
