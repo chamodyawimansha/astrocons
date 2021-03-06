@@ -1,3 +1,12 @@
+<?php
+
+require_once "../private/Message.php";
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    echo "is post";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -179,7 +188,7 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form action="">
+                    <form action="index.php" method="POST">
                         <input type="text" name="name" placeholder="Name">
                         <input type="email" name="email" placeholder="Email">
                         <textarea name="message" placeholder="Your Message"></textarea>
