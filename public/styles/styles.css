@@ -222,6 +222,7 @@ body {
 
 #gallery {
   margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 .gallery-images {
@@ -252,34 +253,33 @@ body {
   margin: 100px 0 50px;
   line-height: 2rem;
   color: var(--text-color);
-}
-
-#testimonials > div *:nth-child(3) {
-  max-width: 1000px;
-  color: var(--text-color);
+  display: none;
 }
 
 .testimonial-cards {
-  margin-top: 70px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 20px;
-  margin-bottom: 100px;
-}
-.testimonial-cards div {
-  display: grid;
-  row-gap: 10px;
-  grid-template-columns: repeat(2, 2fr);
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.testimonial-cards div *:first-child {
-  text-align: center;
-  grid-column: 1 / span 2;
+.testimonial-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.testimonial-cards img {
-  width: 50%;
-  margin: 10px auto 0;
+.testimonial-card img {
+  width: 75px;
+  height: 75px;
+  margin: 10px 0 0;
+  justify-self: center;
+}
+
+.testimonial-card div {
+  grid-column: 2 / span 3;
+}
+
+.testimonial-card div *:last-child {
+  margin-top: 20px;
 }
 
 /* CONTACT Section */
@@ -499,15 +499,6 @@ footer .flex {
   #contact h2,
   #testimonials h2 {
     font-size: 1.5rem;
-  }
-
-  .testimonial-cards {
-    margin-top: 50px;
-  }
-  .testimonial-cards div {
-    display: grid;
-    row-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
   }
 
   .submit-button {

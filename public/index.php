@@ -102,23 +102,42 @@
         <div class="container">
             <p class="section-description">Testimonials</p>
             <h2>Our customer testimonials.</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis obcaecati aliquam, earum ipsam eaque, dolor aliquid itaque neque esse hic alias reprehenderit consequuntur tempora iusto, expedita ullam? Non, excepturi ut!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis obcaecati aliquam, earum ipsam
+                eaque, dolor aliquid itaque neque esse hic alias reprehenderit consequuntur tempora iusto, expedita
+                ullam? Non, excepturi ut!</p>
 
             <div class="testimonial-cards">
-                <div>
-                    <p><b>Bloody Mary</b> - Photographer</p>
+                <div class="testimonial-card">
                     <img src="images/person-1.jpg" alt="Person 1">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis laborum provident ipsum,</p>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis
+                            laborum provident ipsum,</p>
+                        <p><b>Bloody Mary</b> - Photographer</p>
+                    </div>
                 </div>
-                <div>
-                    <p><b>Baileys Irish</b> - Music Lover</p>
+                <div class="testimonial-card">
                     <img src="images/person-2.jpg" alt="Person 2">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis laborum provident ipsum, n</p>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis
+                            laborum provident ipsum, n</p>
+                        <p><b>Baileys Irish</b> - Music Lover</p>
+                    </div>
                 </div>
-                <div>
-                    <p><b>Jack Daniel</b> - Owner</p>
+                <div class="testimonial-card">
                     <img src="images/person-3.jpg" alt="Person 3">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis.</p>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis.
+                        </p>
+                        <p><b>Jack Daniel</b> - Owner</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <img src="images/person-3.jpg" alt="Person 3">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis fugiat fugit debitis.
+                        </p>
+                        <p><b>Jack Daniel</b> - Owner</p>
+                    </div>
                 </div>
             </div>
 
@@ -132,7 +151,8 @@
                 <div class="contact-details">
                     <h2>Get in touch with us!</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis labore quae in quas dolores
-                        incidunt id eligendi modi atque odio! Eius exercitationem esse officiis sunt dolorum at doloremque
+                        incidunt id eligendi modi atque odio! Eius exercitationem esse officiis sunt dolorum at
+                        doloremque
                         perspiciatis quibusdam!</p>
                     <div class="contact-address">
                         <object data="images/icons/map-pin.svg" alt="" width="20px"> </object>
