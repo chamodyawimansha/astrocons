@@ -1,0 +1,5 @@
+composer.phar
+/vendor/
+TODO.txt
+logs/*
+/App/Config.php
