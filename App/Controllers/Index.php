@@ -26,6 +26,18 @@ use \Framework\Core\Controller as Controller;
  */
 class Index extends Controller
 {
+    private $_helpers;
+
+    /**
+     * Loads when object called
+     * 
+     * @return void 
+     */
+    public function __construct()
+    {
+        $this->_helpers = parent::helpers(["demo"]);    
+    }
+
     /**
      * Index function
      * 

@@ -111,12 +111,11 @@ class Application
         define('DS', DIRECTORY_SEPARATOR);
         define('ROOT', getcwd(). DS); // '/var/www/website_folder/'
         define('LOGS', ROOT . "logs" .  DS);
-        define('PUBLIC_FOLDER', ROOT . "public" . ds);
+        define('PUBLIC_FOLDER', ROOT . "public" . DS);
 
         define('APP_FOLDER', ROOT . 'App' . DS);
         define('CONFIG_FOLDER', APP_FOLDER . 'Config' . DS);
         define('FRAMEWORK_FOLDER', ROOT . 'Framework' . DS);
-        define('PUBLIC_FOLDER', APP_FOLDER . 'public' . DS);
 
         define('CONTROLLER_FOLDER', APP_FOLDER . 'Controllers' . DS);
         define('MODEL_FOLDER', APP_FOLDER . 'Models' . DS);
