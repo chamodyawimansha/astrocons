@@ -45,6 +45,6 @@ class Index extends Controller
      */
     public function index()
     {
-        parent::view("index");
+        echo $this->_helpers["demo"]("Hello! World");
     }
 }
