@@ -35,7 +35,12 @@ class Index extends Controller
      */
     public function __construct()
     {
-        $this->_helpers = parent::helpers(["demo"]);    
+        // Loading Helper functions
+        $this->_helpers = parent::helpers(
+            [
+                "demo",
+            ]
+        );    
     }
 
     /**
