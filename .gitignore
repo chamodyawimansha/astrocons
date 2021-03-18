@@ -2,4 +2,4 @@ composer.phar
 /vendor/
 TODO.txt
 /logs/*
-App/Config/config.php
+/App/Config/config.php
