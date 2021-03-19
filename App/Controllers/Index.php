@@ -13,6 +13,7 @@
 namespace App\Controllers;
 
 use \Framework\Core\Controller as Controller;
+use \Framework\Libraries\CSRF as CSRF;
 
 /**
  * Controller Class - Index controller class
@@ -45,10 +46,14 @@ class Index extends Controller
      */
     public function index()
     {
-        $data = [
-            "demo" => $this->_helpers["demo"]("Hello! World."),
-        ];
+        // $data = [
+        //     "demo" => $this->_helpers["demo"]("Hello! World."),
+        // ];
 
-        parent::view("index", $data);
+        // parent::view("index", $data);
+        echo CSRF::new("TESTID");
+        echo "<pre>";
+        var_dump($_SESSION["csrf_tokens"]);
+
     }
 }
