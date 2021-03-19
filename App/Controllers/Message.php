@@ -39,7 +39,7 @@ class Message extends Controller
     }
 
     /**
-     * Index function
+     * Index function - only post request
      *
      * @return void
      */
