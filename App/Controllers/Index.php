@@ -46,14 +46,11 @@ class Index extends Controller
      */
     public function index()
     {
-        // $data = [
-        //     "demo" => $this->_helpers["demo"]("Hello! World."),
-        // ];
+        $data = [
+            "demo" => $this->_helpers["demo"]("Hello! World."),
+        ];
 
-        // parent::view("index", $data);
-        echo CSRF::new("TESTID");
-        echo "<pre>";
-        var_dump($_SESSION["csrf_tokens"]);
-
+        parent::view("index", $data);
+      
     }
 }
