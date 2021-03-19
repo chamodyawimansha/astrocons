@@ -7,7 +7,7 @@
  * @package  SimplePHP
  * @author   Chamodya Wimansha <chamodyawimansha@gmail.com>
  * @license  http://www.gnu.org/copyleft/gpl.html GNU Gene
- * @link     https://github.com/chamodyawimansha/SimplePHP
+ * @link     https://github.com/chamodyawimansha/astrocons
  */
 ?>
 <!DOCTYPE html>
@@ -319,7 +319,7 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form action="index.php" method="POST">
+                    <form action="/message/new" method="POST">
                         <input type="text" name="name" placeholder="Name">
                         <input type="email" name="email" placeholder="Email">
                         <textarea name="message" placeholder="Your Message">
