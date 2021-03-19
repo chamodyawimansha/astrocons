@@ -48,6 +48,7 @@ class Index extends Controller
     {
         $data = [
             "demo" => $this->_helpers["demo"]("Hello! World."),
+            "contact_csrf" => CSRF::new("contact_csrf"),
         ];
 
         parent::view("index", $data);

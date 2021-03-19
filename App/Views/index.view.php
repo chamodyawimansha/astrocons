@@ -322,6 +322,10 @@
                     <form action="/message/new" method="POST">
                         <input type="text" name="name" placeholder="Name">
                         <input type="email" name="email" placeholder="Email">
+                        <input type="hidden" 
+                               name="contact_csrf" 
+                               value="<?php echo $data["contact_csrf"]; ?>"
+                        >
                         <textarea name="message" placeholder="Your Message">
                         </textarea>
                         <input type="submit" class="submit-button" value="Send">
