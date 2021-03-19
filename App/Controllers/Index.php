@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * Index File
  * php version 7.4.2
@@ -30,17 +30,17 @@ class Index extends Controller
 
     /**
      * Loads when object called
-     * 
-     * @return void 
+     *
+     * @return void
      */
     public function __construct()
     {
-        $this->_helpers = parent::helpers(["demo"]);    
+        $this->_helpers = parent::helpers(["demo"]);
     }
 
     /**
      * Index function
-     * 
+     *
      * @return void
      */
     public function index()
