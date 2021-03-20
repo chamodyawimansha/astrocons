@@ -53,6 +53,12 @@ class Contact extends Controller
         $msg = wordwrap($msg, 70);
 
         // send email
-        mail("chamodyawimansha@gmail.com", "My subject", $msg);
+        $re = mail("chamodyawimansha@gmail.com", "My subject", $msg);
+
+        if ($re) {
+            echo "Email sended";
+        } else {
+            echo "Email Failed";
+        }
     }
 }
