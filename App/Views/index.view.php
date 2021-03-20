@@ -319,7 +319,7 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form action="/message/new" method="POST">
+                    <form action="/contact/new" method="POST">
                         <input type="text" name="name" placeholder="Name">
                         <input type="email" name="email" placeholder="Email">
                         <input type="hidden" 

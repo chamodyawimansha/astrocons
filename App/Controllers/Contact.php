@@ -24,7 +24,7 @@ use \Framework\Core\Controller as Controller;
  * @license  http://www.gnu.org/copyleft/gpl.html GNU Gene
  * @link     https://github.com/chamodyawimansha/astrocons
  */
-class Message extends Controller
+class Contact extends Controller
 {
     private $_helpers;
 
