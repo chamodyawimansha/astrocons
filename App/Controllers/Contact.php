@@ -13,6 +13,7 @@
 namespace App\Controllers;
 
 use \Framework\Core\Controller as Controller;
+// use \Framework\Libraries\Messenger as Messenger;
 
 /**
  * Message Class - Sending new Messages
@@ -45,6 +46,6 @@ class Contact extends Controller
      */
     public function new()
     {
-        echo "New Message";
+        echo "new message";
     }
 }
