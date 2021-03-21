@@ -46,6 +46,6 @@ class Contact extends Controller
      */
     public function new()
     {
-        $new = new ContactForm();
+        $new = new ContactForm("", "", "",  $_SERVER['REMOTE_ADDR']);
     }
 }
