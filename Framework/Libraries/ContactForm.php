@@ -12,6 +12,10 @@
 
  namespace Framework\Libraries;
 
+ require ROOT . "vendor/pear/mail/Mail.php";
+
+ use Mail;
+
 /**
  * ContactForm Class - Uses the Pear::Mail class to send emails 
  * php version 7.4.2
@@ -32,7 +36,7 @@ class ContactForm
      */
     public function __construct()
     {
-        
+
     }
 
 }
