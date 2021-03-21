@@ -12,7 +12,8 @@
 
  namespace Framework\Libraries;
 
- require "Mail.php";
+//  use Mail;
+
 /**
  * ContactForm Class - Uses the Pear::Mail class to send emails 
  * php version 7.4.2
@@ -34,42 +35,6 @@ class ContactForm
     public function __construct()
     {
 
-        $host = "smtp.gmail.com";
-        $port = 587;
-        $username = "duobrothers.wordpress@gmail.com";
-        $password = "2^FtGp7$";
-
-
-        $from = "website <chamodya@duobrothers.com>";
-        $to = "Me <chamodyawimansha@gmail.com>";
-        $replyto = "Visitor <reply-to@your-email-here.com>";
-
-
-        $subject = "Hi!";
-        $body = "Hi,\n\n Test from my website";
-
-
-        $headers = array ('From' => $from,
-        'To' => $to,
-        'Subject' => $subject,
-        'Reply-To' =>$replyto);
-        
-        $smtp = Mail::factory(
-            'smtp',
-            array ('host' => $host,
-            'port' => $port,
-            'auth' => true,
-            'username' => $username,
-            'password' => $password)
-        );
-
-        $mail = $smtp->send($to, $headers, $body);
-
-        if (PEAR::isError($mail)) {
-                echo("<p>" . $mail->getMessage() . "</p>");
-        } else {
-                echo("<p>Message successfully sent!</p>");
-        }
     }
 
 }
