@@ -13,7 +13,7 @@
 namespace App\Controllers;
 
 use \Framework\Core\Controller as Controller;
-// use \Framework\Libraries\Messenger as Messenger;
+use \Framework\Libraries\ContactForm as ContactForm;
 
 /**
  * Message Class - Sending new Messages
@@ -46,19 +46,6 @@ class Contact extends Controller
      */
     public function new()
     {
-        // the message
-        $msg = "First line of text\nSecond line of text";
-
-        // use wordwrap() if lines are longer than 70 characters
-        $msg = wordwrap($msg, 70);
-
-        // send email
-        $re = mail("chamodyawimansha@gmail.com", "My subject", $msg);
-
-        if ($re) {
-            echo "Email sended";
-        } else {
-            echo "Email Failed";
-        }
+        $new = new ContactForm;
     }
 }
