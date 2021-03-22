@@ -34,10 +34,10 @@ class ContactForm
 {
     private $_sender;
     private $_senderEmail;
-    private $_sendersIp;
     private $_subject;
     private $_message;
 
+    private $_smtp;
     private $_smtpHost;
     private $_smtpUsername;
     private $_smtpName;
@@ -53,21 +53,19 @@ class ContactForm
     /**
      * Gets the required data from config
      * 
-     * @param $name      - Name of the user
-     * @param $email     - Email of the user
-     * @param $subject   - Subject for the email
-     * @param $message   - Email body
-     * @param $sendersIp - Senders ip address for spam protection
+     * @param $name    - Name of the user
+     * @param $email   - Email of the user
+     * @param $subject - Subject for the email
+     * @param $message - Email body
      * 
      * @return void
      */
-    public function __construct($name, $email, $subject, $message, $sendersIp)
+    public function __construct($name, $email, $subject, $message)
     {
         $this->_sender = $name;
         $this->_senderEmail = $email;
         $this->_subject = $subject;
         $this->_message = $message;
-        $this->_sendersIp = $sendersIp;
 
         // Loading the SMTP configurations
         $this->_smtpHost = $GLOBALS['configs']['smtp_host'] ?? "";
@@ -89,7 +87,92 @@ class ContactForm
      */
     public function send($confirmation = false)
     {
-        echo $this->_save();
+
+        $d = date('Y-m-d H:i:s');
+
+        $html = <<<HTML
+            <body style="background:#ddd">
+                <div style="width:500px;background:#f4f4f4;margin:auto;height:100vh">
+                    <h1 style=
+                        "background: #272727; 
+                        color:#ffe400;
+                        padding:5px;
+                        text-align:center;"
+                    >
+                        ASTROCONS
+                    </h1>
+                    <div style="padding: 10px 50px">
+
+                    <table>
+                        <tr>
+                            <th style="width:75px;padding:10px;text-align:right;">
+                                <strong>Name :</strong>
+                            </th>
+                            <td>$this->_sender</td>
+                        <tr>
+                        <tr>
+                            <th style="padding:10px;text-align:right;">
+                                <strong>Email :</strong>
+                            </th>
+                            <td>$this->_senderEmail</td>
+                        <tr>
+                        <tr>
+                            <th style="padding:10px;text-align:right;">
+                                <strong>Subject :</strong>
+                            </th>
+                            <td>$this->_subject</td>
+                        <tr>
+                        <tr>
+                            <th style="padding:10px;text-align:right;">
+                                <strong>Message :</strong>
+                            </th>
+                            <td>$this->_message</td>
+                        <tr>
+                    </table>
+                    <p style="margin: 50px 0;background:#ddd;padding:10px">
+                        This is an Automatically generated message from 
+                        <a href="astrocons.co.uk">Astrocons.co.uk</a>
+                    </p>
+
+                    <p style="margin-bottom: 50px">
+                        Send a Reply : 
+                        <a href="
+                            mailto:{$this->_senderEmail}?subject=Re:{$this->_subject}"
+                        >
+                            $this->_senderEmail
+                        </a>
+                    </p>
+                    <code>
+                        Email generated on : $d
+                    </code>
+                    </div>
+                </div>
+            </body>
+        HTML;
+
+        $this->_save();
+        $this->_smtpinit();
+
+        $this->_emailinit(
+            $this->_senderEmail,
+            $this->_sender,
+            "chamodyawimansha@gmail.com",
+            "chamodya wimansha",
+            "Hello, There!",
+            $html,
+            $this->_message
+        );
+
+        try {
+            $this->_smtp->send();
+
+            echo "Message has been sent successfully";
+        
+        } catch (Exception $e) {
+        
+            echo "Mailer Error: " . $mail->ErrorInfo;
+        
+        }
     }
 
     /**
@@ -105,7 +188,7 @@ class ContactForm
     /**
      * Saves the message time in the session for a temporary
      * 
-     * @return boolean
+     * @return void
      */
     private function _save()
     {   
@@ -114,38 +197,62 @@ class ContactForm
         }
     }
 
+    /**
+     * Initiates the smtp settings
+     * 
+     * @return void
+     */
+    private function _smtpinit()
+    {
+        $this->_smtp = new PHPMailer(true);
+        // set the PHPMailer to smtp mode
+        $this->_smtp->isSMTP();
+
+        $this->_smtp->Host = $this->_smtpHost;
+        
+        // PHPMailer smtp authentication set to true
+        $this->_smtp->SMTPAuth = true;
+        
+        // login using smtp username and password
+        $this->_smtp->Username = $this->_smtpUsername;
+        $this->_smtp->Password = $this->_smtpPassword;
+        
+        // set the PHPMailer smtp host authentication to send emails
+        $this->_smtp->SMTPSecure =  $this->_smtpEncryption;
+
+        // PHPMailer smtp port
+        $this->_smtp->Port = $this->_smtpPort;
+    }
+
+    /**
+     * Initiates email headers and body
+     * 
+     * @param $senderEmail   - Email of the sender
+     * @param $senderName    - Sender's user name
+     * @param $receiverEmail - Receiver's email address
+     * @param $receiverName  - Receiver's name
+     * @param $subject       - Subject of the email
+     * @param $textBody      - Body of the email
+     * @param $altBody       - Alternative text of the email - short form
+     * 
+     * @return void
+     */
+    private function _emailinit(
+        $senderEmail, $senderName, 
+        $receiverEmail, $receiverName, $subject, $textBody, $altBody
+    ) {
+        // details of the user
+        $this->_smtp->From = $senderEmail;
+        $this->_smtp->FromName = $senderName;
+
+        // web masters details
+        $this->_smtp->addAddress($receiverEmail, $receiverName);
+
+        $this->_smtp->isHTML(true);
+
+        $this->_smtp->Subject = $subject;
+        $this->_smtp->Body = $textBody;
+        $this->_smtp->AltBody = $altBody;
+
+    }
 }
-
-        // $mail = new PHPMailer(true);
-                            
-        // //Set PHPMailer to use SMTP.
-        // $mail->isSMTP();            
-        // //Set SMTP host name                          
-        // $mail->Host = "smtp.gmail.com";
-        // //Set this to true if SMTP host requires authentication to send email
-        // $mail->SMTPAuth = true;                          
-        // //Provide username and password     
-        // $mail->Username = "Duobrothers.wordpress@gmail.com";                 
-        // $mail->Password = "2^FtGp7$";                           
-        // //If SMTP requires TLS encryption then set it
-        // $mail->SMTPSecure = "tls";                           
-        // //Set TCP port to connect to
-        // $mail->Port = 587;                                   
-
-        // $mail->From = "name@gmail.com";
-        // $mail->FromName = "Full Name";
-
-        // $mail->addAddress("chamodyawimansha@gmail.com", "chamodya wimansha");
-
-        // $mail->isHTML(true);
-
-        // $mail->Subject = "Subject Text";
-        // $mail->Body = "<i>Mail body in HTML</i>";
-        // $mail->AltBody = "This is the plain text version of the email content";
-
-        // try {
-        //     $mail->send();
-        //     echo "Message has been sent successfully";
-        // } catch (Exception $e) {
-        //     echo "Mailer Error: " . $mail->ErrorInfo;
-        // }
