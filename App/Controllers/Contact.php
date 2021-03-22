@@ -72,7 +72,7 @@ class Contact extends Controller
             die();
         }
 
-
+        
         echo "yellow";
 
     }

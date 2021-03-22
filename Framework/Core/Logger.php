@@ -23,7 +23,7 @@ namespace Framework\Core;
  * @link     https://github.com/chamodyawimansha/SimplePHP
  */
 Class Logger
-{   
+{
     private static $_logFilePath = LOGS . "log_file.log"; 
     private static $_messageTypes =  array('[Info]', '[Warning]', '[Success]');
 
