@@ -39,6 +39,7 @@ class ContactForm
 
 
     private $_sender;
+    private $_sendersIp;
     private $_subject;
     private $_message;
 
@@ -57,16 +58,35 @@ class ContactForm
     /**
      * Gets the required data from config
      * 
-     * @param $sender    - Email of the user who filled the contact form
-     * @param $subject   - Subject of the email
-     * @param $message   -  Email body
+     * @param $sender    - Email of the user
+     * @param $subject   - Subject for the email
+     * @param $message   - Email body
      * @param $sendersIp - Senders ip address for spam protection
      * 
      * @return void
      */
     public function __construct($sender, $subject, $message, $sendersIp)
     {
-        echo $sendersIp;
+        $this->_sender = $sender;
+        $this->_subject = $subject;
+        $this->_message = $message;
+        $this->_sendersIp = $sendersIp;
+
+        // Loading the SMTP configurations
+        $this->_smtpHost = $GLOBALS['configs']['smtp_host'] ?? "";
+        $this->_smtpUsername = $GLOBALS['configs']['smtp_username'] ?? "";
+        $this->_smtpName = $GLOBALS['configs']['smtp_name'] ?? "";
+        $this->_smtpPassword = $GLOBALS['configs']['smtp_password'] ?? "";
+        $this->_smtpPort = $GLOBALS['configs']['smtp_port'] ?? "";
+        $this->_smtpEncryption = $GLOBALS['configs']['smtp_encryption'] ?? "";
+
+        $this->_webmasterAddress = $GLOBALS['configs']['webmasters_address'] ?? "";
+
+        // Loading the Database configurations
+        $this->_dbHost = $GLOBALS['configs']['db_host'] ?? "";
+        $this->_dbUser = $GLOBALS['configs']['db_host'] ?? "";
+        $this->_dbPass = $GLOBALS['configs']['db_host'] ?? "";
+        $this->_dbName = $GLOBALS['configs']['db_host'] ?? "";
     }
 
     /**

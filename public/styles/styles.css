@@ -359,6 +359,10 @@ body {
   border-radius: 5px;
 }
 
+.contact-form input[name="full_name"] {
+  display: none;
+}
+
 .contact-form textarea {
   min-width: 100%;
   max-width: 630px;
