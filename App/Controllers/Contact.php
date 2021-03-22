@@ -63,7 +63,7 @@ class Contact extends Controller
             die();
         }
 
-        $token =filter_var($_POST['contact_csrf'] ?? "", FILTER_SANITIZE_STRING);
+        $token = filter_var($_POST['contact_csrf'] ?? "", FILTER_SANITIZE_STRING);
 
         // authenticate the form for protection against CSRF.
         if (!CSRF::check('contact_csrf', $token)) {
@@ -72,8 +72,16 @@ class Contact extends Controller
             die();
         }
 
+        $name = filter_var($_POST['name'] ?? "", FILTER_SANITIZE_STRING);
+        $email = filter_var($_POST['email'] ?? "", FILTER_SANITIZE_EMAIL);
+        $subject = filter_var($_POST['subject'] ?? "", FILTER_SANITIZE_STRING);
+        $message = filter_var($_POST['message'] ?? "", FILTER_SANITIZE_STRING);
         
-        echo "yellow";
+        // get the users ip address for spam protection
+        $sendersIp = $_SERVER['REMOTE_ADDR'];
 
+        $form = new ContactForm($name, $email, $subject, $message, $sendersIp);
+
+        $form->send();
     }
 }

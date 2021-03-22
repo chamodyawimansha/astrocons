@@ -39,6 +39,7 @@ class ContactForm
 
 
     private $_sender;
+    private $_senderEmail;
     private $_sendersIp;
     private $_subject;
     private $_message;
@@ -65,9 +66,10 @@ class ContactForm
      * 
      * @return void
      */
-    public function __construct($sender, $subject, $message, $sendersIp)
+    public function __construct($name, $email, $subject, $message, $sendersIp)
     {
-        $this->_sender = $sender;
+        $this->_sender = $name;
+        $this->_senderEmail = $email;
         $this->_subject = $subject;
         $this->_message = $message;
         $this->_sendersIp = $sendersIp;
@@ -98,7 +100,11 @@ class ContactForm
      */
     public function send($confirmation = false)
     {
-
+        echo $this->_sender . " \n" . 
+             $this->_senderEmail . "\n" .
+             $this->_subject . "\n" .
+             $this->_message . "\n" .
+             $this->_sendersIp . "\n";
     }
 
     /**

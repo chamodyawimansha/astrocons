@@ -398,8 +398,10 @@
                 <div class="contact-form">
                     <form action="/contact/new" method="post">
                         <input type="text" name="name" placeholder="Name" required>
-                        <input type="email" n
-                                ame="email" placeholder="Email" required>
+                        <input type="email" 
+                                name="email" placeholder="Email" required>
+                        <input type="text" 
+                                name="subject" placeholder="Subject" required>
                         <input type="hidden" 
                                name="contact_csrf" 
                                value="<?php echo $data["contact_csrf"]; ?>"
