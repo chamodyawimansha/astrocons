@@ -403,6 +403,7 @@
                                name="contact_csrf" 
                                value="<?php echo $data["contact_csrf"]; ?>"
                         >
+                        <input type="text" name="full_name" placeholder="Full Name">
                         <textarea 
                             name="message" placeholder="Your Message"></textarea>
                         <input type="submit" class="submit-button" value="Send">
