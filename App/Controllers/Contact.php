@@ -63,6 +63,19 @@ class Contact extends Controller
             die();
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////
+
+        // Edit Redirect create redirect function function(controller/method/);
+
+        // create method to pass messages ("which controller should i show the message and action", "message type", "message")
+
+        // // check if the user has send a message previously
+        // if (isset($_SESSION["message_time"])) {
+        //     echo "YES";
+        // }
+
+        ///////////////////////////////////////////////////////////////////////////////////////
+
         $token = filter_var($_POST['contact_csrf'] ?? "", FILTER_SANITIZE_STRING);
 
         // authenticate the form for protection against CSRF.

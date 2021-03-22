@@ -15,6 +15,7 @@ namespace Framework\Libraries;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+use Framework\Core\Logger as Logger;
 
 //  use Mail;
 
@@ -31,13 +32,6 @@ use PHPMailer\PHPMailer\Exception;
 
 class ContactForm
 {
-
-    private $_dbHost;
-    private $_dbUser;
-    private $_dbPass;
-    private $_dbName;
-
-
     private $_sender;
     private $_senderEmail;
     private $_sendersIp;
@@ -59,7 +53,8 @@ class ContactForm
     /**
      * Gets the required data from config
      * 
-     * @param $sender    - Email of the user
+     * @param $name      - Name of the user
+     * @param $email     - Email of the user
      * @param $subject   - Subject for the email
      * @param $message   - Email body
      * @param $sendersIp - Senders ip address for spam protection
@@ -83,12 +78,6 @@ class ContactForm
         $this->_smtpEncryption = $GLOBALS['configs']['smtp_encryption'] ?? "";
 
         $this->_webmasterAddress = $GLOBALS['configs']['webmasters_address'] ?? "";
-
-        // Loading the Database configurations
-        $this->_dbHost = $GLOBALS['configs']['db_host'] ?? "";
-        $this->_dbUser = $GLOBALS['configs']['db_host'] ?? "";
-        $this->_dbPass = $GLOBALS['configs']['db_host'] ?? "";
-        $this->_dbName = $GLOBALS['configs']['db_host'] ?? "";
     }
 
     /**
@@ -100,23 +89,7 @@ class ContactForm
      */
     public function send($confirmation = false)
     {
-        echo $this->_sender . " \n" . 
-             $this->_senderEmail . "\n" .
-             $this->_subject . "\n" .
-             $this->_message . "\n" .
-             $this->_sendersIp . "\n";
-    }
-
-    /**
-     * Checks the ip address in the database
-     * previous message time periods to figure out a 
-     * spam or not
-     * 
-     * @return boolean
-     */
-    public function isItSpam()
-    {
-
+        echo $this->_save();
     }
 
     /**
@@ -130,15 +103,16 @@ class ContactForm
     }
 
     /**
-     * Saves the message in the database
+     * Saves the message time in the session for a temporary
      * 
      * @return boolean
      */
     private function _save()
-    {
-
+    {   
+        if (!isset($_SESSION["message_time"])) {
+            $_SESSION["message_time"] = date('Y-m-d H:i:s');
+        }
     }
-
 
 }
 
