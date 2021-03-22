@@ -14,6 +14,7 @@ namespace App\Controllers;
 
 use \Framework\Core\Controller as Controller;
 use \Framework\Libraries\ContactForm as ContactForm;
+use \Framework\Libraries\CSRF as CSRF;
 use \Framework\Core\Logger as Logger;
 
 /**
@@ -47,15 +48,32 @@ class Contact extends Controller
      */
     public function new()
     {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            
-            if (!empty($_POST["full_name"])) {
-                \header("Location: /");
-            }
-
-        } else {
+        // check for request type
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            // if not a post request
             Logger::httpStatus(404, "404 Not Found");
             die();
         }
+
+        // check for spam
+        if (!isset($_POST["full_name"]) && !empty($_POST["full_name"])) {
+            
+            // if honeypot field is not empty consider as a spam
+            Logger::httpStatus(400, "400 Bad Request");
+            die();
+        }
+
+        $token =filter_var($_POST['contact_csrf'] ?? "", FILTER_SANITIZE_STRING);
+
+        // authenticate the form for protection against CSRF.
+        if (!CSRF::check('contact_csrf', $token)) {
+            // If the html form not valid
+            Logger::httpStatus(400, "400 Bad Request");
+            die();
+        }
+
+
+        echo "yellow";
+
     }
 }
