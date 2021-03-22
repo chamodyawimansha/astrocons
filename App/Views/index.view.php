@@ -396,7 +396,7 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form action="/contact/new" method="POST">
+                    <form action="/contact/new" method="post">
                         <input type="text" name="name" placeholder="Name">
                         <input type="email" name="email" placeholder="Email">
                         <input type="hidden" 

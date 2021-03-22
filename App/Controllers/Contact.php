@@ -14,6 +14,7 @@ namespace App\Controllers;
 
 use \Framework\Core\Controller as Controller;
 use \Framework\Libraries\ContactForm as ContactForm;
+use \Framework\Core\Logger as Logger;
 
 /**
  * Message Class - Sending new Messages
@@ -46,6 +47,15 @@ class Contact extends Controller
      */
     public function new()
     {
-        $new = new ContactForm("", "", "",  $_SERVER['REMOTE_ADDR']);
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            
+            if (!empty($_POST["full_name"])) {
+                \header("Location: /");
+            }
+
+        } else {
+            Logger::httpStatus(404, "404 Not Found");
+            die();
+        }
     }
 }
