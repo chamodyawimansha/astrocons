@@ -89,12 +89,17 @@ class Contact extends Controller
         $email = filter_var($_POST['email'] ?? "", FILTER_SANITIZE_EMAIL);
         $subject = filter_var($_POST['subject'] ?? "", FILTER_SANITIZE_STRING);
         $message = filter_var($_POST['message'] ?? "", FILTER_SANITIZE_STRING);
+
+        $confirmation = filter_var(
+            $_POST['confirm-email'] ?? "", 
+            FILTER_SANITIZE_STRING
+        );
         
         // get the users ip address for spam protection
         $sendersIp = $_SERVER['REMOTE_ADDR'];
 
         $form = new ContactForm($name, $email, $subject, $message, $sendersIp);
 
-        $form->send();
+        echo $form->send($confirmation);
     }
 }

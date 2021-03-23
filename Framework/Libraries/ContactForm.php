@@ -46,9 +46,7 @@ class ContactForm
     private $_smtpEncryption;
 
     private $_webmasterAddress;
-
-    private $_totalMessagesPerDay = 5;
-
+    private $_webmasterName;
 
     /**
      * Gets the required data from config
@@ -76,6 +74,9 @@ class ContactForm
         $this->_smtpEncryption = $GLOBALS['configs']['smtp_encryption'] ?? "";
 
         $this->_webmasterAddress = $GLOBALS['configs']['webmasters_address'] ?? "";
+        $this->_webmasterName = $GLOBALS['configs']['webmasters_name'] ?? 
+                                    "Webmaster";
+
     }
 
     /**
@@ -85,11 +86,10 @@ class ContactForm
      * 
      * @return boolean
      */
-    public function send($confirmation = false)
+    public function send($confirmation)
     {
 
         $d = date('Y-m-d H:i:s');
-
         $html = <<<HTML
             <body style="background:#ddd">
                 <div style="width:500px;background:#f4f4f4;margin:auto;height:100vh">
@@ -158,21 +158,31 @@ class ContactForm
             $this->_sender,
             "chamodyawimansha@gmail.com",
             "chamodya wimansha",
-            "Hello, There!",
+            $this->_subject,
             $html,
             $this->_message
         );
 
         try {
+            // send the email and log it
             $this->_smtp->send();
-
-            echo "Message has been sent successfully";
-        
+            Logger::log("PHPMailer - Email Sended");
         } catch (Exception $e) {
-        
-            echo "Mailer Error: " . $mail->ErrorInfo;
-        
+            // log the error and returning false if the email failed to send
+            Logger::log(
+                "PHPMailer Error: " . 
+                $this->_smtp->ErrorInfo . 
+                "[". $e . "]"
+            );
+            return false;
         }
+
+        // sending confirmation email
+        if ($confirmation) {
+            return $this->_sendConfirmation();
+        }
+
+        return true;
     }
 
     /**
@@ -182,7 +192,63 @@ class ContactForm
      */
     private function _sendConfirmation()
     {
+        $d = date('Y-m-d H:i:s');
+        $html = <<<HTML
+            <body style="background:#ddd">
+                <div style="width:500px;background:#f4f4f4;margin:auto;height:100vh">
+                    <h1 style=
+                        "background: #272727; 
+                        color:#ffe400;
+                        padding:5px;
+                        text-align:center;"
+                    >
+                        ASTROCONS
+                    </h1>
+                    <div style="padding: 10px 50px">
+                    <p>Hello there,</p>
+                    <p style="line-height:1.4rem">Thankyou for contacting us. 
+                        we will reply to your message soon.
+                    </p>
+                    <p style="margin-top:50px">
+                         Thanks in advance.
+                    </p>
+                    <p style="margin: 100px 0 10px;background:#ddd;padding:10px">
+                        This is an Automatically generated message from 
+                        <a href="astrocons.co.uk">Astrocons.co.uk</a>
+                    </p>
+                    <code>
+                        Email generated on : $d
+                    </code>
+                    </div>
+                </div>
+            </body>
+        HTML;
 
+
+        $this->_emailinit(
+            $this->_webmasterAddress,
+            $this->_webmasterName,
+            $this->_senderEmail,
+            $this->_sender,
+            $this->_subject,
+            $html,
+            "Thankyou for contacting us. we will reply to your message soon."
+        );
+
+        try {
+            // send the email and log it
+            $this->_smtp->send();
+            Logger::log("PHPMailer - Confirmation email Sended");
+            return true;
+        } catch (Exception $e) {
+            // log the error and returning false if the email failed to send
+            Logger::log(
+                "PHPMailer confirmation email error: " . 
+                $this->_smtp->ErrorInfo . 
+                "[". $e . "]"
+            );
+            return false;
+        }
     }
 
     /**
