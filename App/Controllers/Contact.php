@@ -108,8 +108,7 @@ class Contact extends Controller
         if ($form->send($confirmation)) {
             header("Location:/");
         } else {
-            // header("Location:/");
-            echo "no";
+            header("Location:/");
         }
 
 

@@ -88,7 +88,6 @@ class ContactForm
      */
     public function send($confirmation)
     {
-
         $d = date('Y-m-d H:i:s');
         $html = <<<HTML
             <body style="background:#ddd">
