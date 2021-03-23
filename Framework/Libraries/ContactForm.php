@@ -170,7 +170,8 @@ class ContactForm
             Logger::log(
                 "PHPMailer Error: " . 
                 $this->_smtp->ErrorInfo . 
-                "[". $e . "]"
+                "[". $e . "]",
+                1
             );
             return false;
         }
@@ -241,7 +242,8 @@ class ContactForm
             Logger::log(
                 "PHPMailer confirmation email error: " . 
                 $this->_smtp->ErrorInfo . 
-                "[". $e . "]"
+                "[". $e . "]",
+                1
             );
             return false;
         }
