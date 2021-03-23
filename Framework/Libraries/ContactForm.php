@@ -73,8 +73,8 @@ class ContactForm
         $this->_smtpPort = $GLOBALS['configs']['smtp_port'] ?? "";
         $this->_smtpEncryption = $GLOBALS['configs']['smtp_encryption'] ?? "";
 
-        $this->_webmasterAddress = $GLOBALS['configs']['webmasters_address'] ?? "";
-        $this->_webmasterName = $GLOBALS['configs']['webmasters_name'] ?? 
+        $this->_webmasterAddress = $GLOBALS['configs']['webmaster_address'] ?? "";
+        $this->_webmasterName = $GLOBALS['configs']['webmaster_name'] ?? 
                                     "Webmaster";
 
     }

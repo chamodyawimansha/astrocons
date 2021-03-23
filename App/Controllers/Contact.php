@@ -98,7 +98,7 @@ class Contact extends Controller
         // get the users ip address for spam protection
         $sendersIp = $_SERVER['REMOTE_ADDR'];
 
-        $form = new ContactForm($name, $email, $subject, $message, $sendersIp);
+        $form = new ContactForm($name, $email, $subject, $message);
 
 
         ////////////////////////////////////////////////////////////////////
