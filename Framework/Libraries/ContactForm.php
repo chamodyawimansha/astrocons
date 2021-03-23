@@ -37,7 +37,6 @@ class ContactForm
     private $_subject;
     private $_message;
 
-    private $_smtp;
     private $_smtpHost;
     private $_smtpUsername;
     private $_smtpName;
@@ -149,10 +148,12 @@ class ContactForm
             </body>
         HTML;
 
-        $this->_save();
-        $this->_smtpinit();
+        $this->_save(); // save on session
 
-        $this->_emailinit(
+        // sending email to the webmaster
+        $email = $this->_smtpinit(new PHPMailer(true));
+        $email = $this->_emailinit(
+            $email,
             $this->_webmasterAddress,
             $this->_webmasterName,
             $this->_subject,
@@ -162,13 +163,13 @@ class ContactForm
 
         try {
             // send the email and log it
-            $this->_smtp->send();
+            $email->send();
             Logger::log("PHPMailer - Email Sended");
         } catch (Exception $e) {
             // log the error and returning false if the email failed to send
             Logger::log(
                 "PHPMailer Error: " . 
-                $this->_smtp->ErrorInfo . 
+                $email->ErrorInfo . 
                 "[". $e . "]",
                 1
             );
@@ -222,8 +223,9 @@ class ContactForm
             </body>
         HTML;
 
-
-        $this->_emailinit(
+        $confirmation = $this->_smtpinit(new PHPMailer(true));
+        $confirmation = $this->_emailinit(
+            $confirmation,
             $this->_senderEmail,
             $this->_sender,
             $this->_subject,
@@ -233,14 +235,14 @@ class ContactForm
 
         try {
             // send the email and log it
-            $this->_smtp->send();
+            $confirmation->send();
             Logger::log("PHPMailer - Confirmation email Sended");
             return true;
         } catch (Exception $e) {
             // log the error and returning false if the email failed to send
             Logger::log(
                 "PHPMailer confirmation email error: " . 
-                $this->_smtp->ErrorInfo . 
+                $confirmation->ErrorInfo . 
                 "[". $e . "]",
                 1
             );
@@ -263,56 +265,66 @@ class ContactForm
     /**
      * Initiates the smtp settings
      * 
-     * @return void
+     * @param $email - PHPMailer class
+     * 
+     * @return PHPMailer
      */
-    private function _smtpinit()
+    private function _smtpinit(PHPMailer $email)
     {
-        $this->_smtp = new PHPMailer(true);
         // set the PHPMailer to smtp mode
-        $this->_smtp->isSMTP();
+        $email->isSMTP();
 
-        $this->_smtp->Host = $this->_smtpHost;
+        $email->Host = $this->_smtpHost;
         
         // PHPMailer smtp authentication set to true
-        $this->_smtp->SMTPAuth = true;
+        $email->SMTPAuth = true;
         
         // login using smtp username and password
-        $this->_smtp->Username = $this->_smtpUsername;
-        $this->_smtp->Password = $this->_smtpPassword;
+        $email->Username = $this->_smtpUsername;
+        $email->Password = $this->_smtpPassword;
         
         // set the PHPMailer smtp host authentication to send emails
-        $this->_smtp->SMTPSecure =  $this->_smtpEncryption;
+        $email->SMTPSecure =  $this->_smtpEncryption;
 
         // PHPMailer smtp port
-        $this->_smtp->Port = $this->_smtpPort;
+        $email->Port = $this->_smtpPort;
+
+        return $email;
     }
 
     /**
      * Initiates email headers and body
      * 
+     * @param $email         - PHPMailer class
      * @param $receiverEmail - Receiver's email address
      * @param $receiverName  - Receiver's name
      * @param $subject       - Subject of the email
      * @param $textBody      - Body of the email
      * @param $altBody       - Alternative text of the email - short form
      * 
-     * @return void
+     * @return PHPMailer
      */
     private function _emailinit(
-        $receiverEmail, $receiverName, $subject, $textBody, $altBody
+        $email,
+        $receiverEmail, 
+        $receiverName, 
+        $subject, 
+        $textBody, 
+        $altBody
     ) {
         // details of the user
-        $this->_smtp->From = $this->_smtpUsername;
-        $this->_smtp->FromName = $this->_smtpName;
+        $email->From = $this->_smtpUsername;
+        $email->FromName = $this->_smtpName;
 
         // web masters details
-        $this->_smtp->addAddress($receiverEmail, $receiverName);
+        $email->addAddress($receiverEmail, $receiverName);
 
-        $this->_smtp->isHTML(true);
+        $email->isHTML(true);
 
-        $this->_smtp->Subject = $subject;
-        $this->_smtp->Body = $textBody;
-        $this->_smtp->AltBody = $altBody;
+        $email->Subject = $subject;
+        $email->Body = $textBody;
+        $email->AltBody = $altBody;
 
+        return $email;
     }
 }
