@@ -156,8 +156,8 @@ class ContactForm
         $this->_emailinit(
             $this->_senderEmail,
             $this->_sender,
-            "chamodyawimansha@gmail.com",
-            "chamodya wimansha",
+            $this->_webmasterAddress,
+            $this->_webmasterName,
             $this->_subject,
             $html,
             $this->_message

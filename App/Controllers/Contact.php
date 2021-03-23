@@ -100,6 +100,19 @@ class Contact extends Controller
 
         $form = new ContactForm($name, $email, $subject, $message, $sendersIp);
 
-        echo $form->send($confirmation);
+
+        ////////////////////////////////////////////////////////////////////
+
+        // Edit this for more informative message
+
+        if ($form->send($confirmation)) {
+            header("Location : /");
+        } else {
+            header("Location : /");
+        }
+
+
+        ////////////////////////////////////////////////////////////////////
+
     }
 }
