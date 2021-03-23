@@ -154,8 +154,6 @@ class ContactForm
         $this->_smtpinit();
 
         $this->_emailinit(
-            $this->_senderEmail,
-            $this->_sender,
             $this->_webmasterAddress,
             $this->_webmasterName,
             $this->_subject,
@@ -226,8 +224,6 @@ class ContactForm
 
 
         $this->_emailinit(
-            $this->_webmasterAddress,
-            $this->_webmasterName,
             $this->_senderEmail,
             $this->_sender,
             $this->_subject,
@@ -293,8 +289,6 @@ class ContactForm
     /**
      * Initiates email headers and body
      * 
-     * @param $senderEmail   - Email of the sender
-     * @param $senderName    - Sender's user name
      * @param $receiverEmail - Receiver's email address
      * @param $receiverName  - Receiver's name
      * @param $subject       - Subject of the email
@@ -304,12 +298,11 @@ class ContactForm
      * @return void
      */
     private function _emailinit(
-        $senderEmail, $senderName, 
         $receiverEmail, $receiverName, $subject, $textBody, $altBody
     ) {
         // details of the user
-        $this->_smtp->From = $senderEmail;
-        $this->_smtp->FromName = $senderName;
+        $this->_smtp->From = $this->_smtpUsername;
+        $this->_smtp->FromName = $this->_smtpName;
 
         // web masters details
         $this->_smtp->addAddress($receiverEmail, $receiverName);
