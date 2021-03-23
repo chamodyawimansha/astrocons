@@ -410,6 +410,13 @@
                         <textarea 
                             name="message" 
                             placeholder="Your Message" required></textarea>
+                        <div class="form-group">
+                            <input type="checkbox" 
+                               id="confirmation" name="confirm-email" 
+                               value="1">
+                            <label for="confirmation"> Send me a Confirmation.</label>
+                        </div>
+
                         <input type="submit" class="submit-button" value="Send">
                     </form>
                 </div>

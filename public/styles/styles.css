@@ -46,7 +46,8 @@ h6 {
   font-family: "Heebo", sans-serif;
 }
 
-p {
+p,
+label {
   font-family: "Lato", sans-serif;
 }
 
@@ -361,6 +362,11 @@ body {
 
 .contact-form input[name="full_name"] {
   display: none;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
 }
 
 .contact-form textarea {

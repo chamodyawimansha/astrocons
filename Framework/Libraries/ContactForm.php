@@ -137,7 +137,7 @@ class ContactForm
                     <p style="margin-bottom: 50px">
                         Send a Reply : 
                         <a href="
-                            mailto:{$this->_senderEmail}?subject=Re:{$this->_subject}"
+                        mailto:{$this->_senderEmail}?subject=Re:{$this->_subject}"
                         >
                             $this->_senderEmail
                         </a>
