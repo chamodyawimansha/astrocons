@@ -102,3 +102,10 @@
     <meta name="theme-color" content="#ffffff">
     <title>Astrocons</title>
 </head>
+
+<body>
+    <div id="navbar">
+        <div class="container flex">
+            <p id="nav-logo" class="select-off"><a href="/">Astrocons</a></p>
+        </div>
+    </div>

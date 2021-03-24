@@ -204,12 +204,12 @@ class ContactForm
                         ASTROCONS
                     </h1>
                     <div style="padding: 10px 50px">
-                    <p>Hello there,</p>
-                    <p style="line-height:1.4rem">Thankyou for contacting us. 
-                        we will reply to your message soon.
+                    <p>Thank you for getting in touch!</p>
+                    <p style="line-height:1.4rem">We appreciate you contacting  us. 
+                         One of our colleagues will get back in touch with you soon!
                     </p>
                     <p style="margin-top:50px">
-                         Thanks in advance.
+                         Have a great day!
                     </p>
                     <p style="margin: 100px 0 10px;background:#ddd;padding:10px">
                         This is an Automatically generated message from 

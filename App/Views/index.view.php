@@ -12,13 +12,7 @@
 
  require VIEW_FOLDER . "partials/header.php";
 ?>
-<body>
 
-    <div id="navbar">
-        <div class="container flex">
-            <p id="nav-logo" class="select-off"><a href="/">Astrocons</a></p>
-        </div>
-    </div>
 
     <section id="intro">
         <div class="overlay flex">

@@ -57,7 +57,8 @@ class Index extends Controller
             "messages" => $this->_classParams["messages"] ?? []
         ];
         
-        parent::view("index", $data);
+        // parent::view("index", $data);
+        return parent::view("thankyou", $data);
       
     }
 }

@@ -14,6 +14,21 @@
 ?>
 
 
+<div class="alert-container">
+    <div class="thanking-note">
+    <h1>
+        Thank you for getting in touch! 
+    </h1>
+    <p>
+        We appreciate you contacting Astro constructions. 
+        One of our colleagues will get back in touch with you soon!
+    </p>
+    <p>Have a great day!</p>
+    </div>
+</div>
+
+
+
 <?php
  require VIEW_FOLDER . "partials/footer.php";
 ?>
