@@ -24,11 +24,19 @@
         One of our colleagues will get back in touch with you soon!
     </p>
     <p>Have a great day!</p>
+    <img src="/public/images/astro-logo-large.jpeg" alt="Astro Logo">
+        <div class="alert-footer">
+            <p 
+                class="copy-notice">
+                    Copyright &copy; 2021 
+                    <?php echo date("Y") == "2021" ? "" : "-" . date("Y"); ?>
+                    <a href="astrocons.co.uk">
+                        astrocons.co.uk.
+                    </a> 
+                        All Rights Reserved.
+            </p>
+        </div>
     </div>
 </div>
-
-
-
-<?php
- require VIEW_FOLDER . "partials/footer.php";
-?>
+</body>
+</html>

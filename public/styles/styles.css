@@ -530,3 +530,51 @@ footer .flex {
     display: none;
   }
 }
+
+.alert-container {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-color);
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.thanking-note {
+  position: relative;
+  width: 450px;
+  height: 550px;
+  background-color: var(--dark-color);
+  text-align: center;
+}
+
+.thanking-note h1 {
+  color: var(--primary-color);
+  padding: 20px;
+  font-size: 1.7rem;
+}
+
+.thanking-note p {
+  color: var(--light-color);
+}
+
+.thanking-note p:nth-child(2) {
+  padding: 0 20px;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  text-align: left;
+}
+
+.thanking-note p:nth-child(3) {
+  padding: 30px 20px;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  text-align: left;
+}
+
+.alert-footer {
+  bottom: 20px;
+  width: 100%;
+  position: absolute;
+}

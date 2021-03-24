@@ -1,3 +1,15 @@
+<?php
+/**
+ * Index View footer partial File
+ * php version 7.4.2
+ *
+ * @category View_File
+ * @package  SimplePHP
+ * @author   Chamodya Wimansha <chamodyawimansha@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU Gene
+ * @link     https://github.com/chamodyawimansha/astrocons
+ */
+?>
     <footer>
         <div class="container flex">
             <p 
