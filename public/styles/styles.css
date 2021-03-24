@@ -369,6 +369,12 @@ body {
   font-size: 1.2rem;
 }
 
+.form-group .small {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 0;
+}
+
 .contact-form textarea {
   min-width: 100%;
   max-width: 630px;

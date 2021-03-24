@@ -107,7 +107,7 @@
 
     <div id="navbar">
         <div class="container flex">
-            <h1 id="nav-logo" class="select-off"><a href="/">Astrocons</a></h1>
+            <p id="nav-logo" class="select-off"><a href="/">Astrocons</a></p>
         </div>
     </div>
 
@@ -398,8 +398,11 @@
                 <div class="contact-form">
                     <form action="/contact/new" method="post">
                         <input type="text" name="name" placeholder="Name" required>
-                        <input type="email" 
-                                name="email" placeholder="Email" required>
+                        <div class="form-group">
+                            <input type="email" 
+                                    name="email" placeholder="Email" required>
+                            <p class="small">We don't keep your email address.<p>
+                        </div>
                         <input type="text" 
                                 name="subject" placeholder="Subject" required>
                         <input type="hidden" 
