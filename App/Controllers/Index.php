@@ -56,10 +56,7 @@ class Index extends Controller
             "contact_csrf" => CSRF::new("contact_csrf"),
             "messages" => $this->_classParams["messages"] ?? []
         ];
-
-        var_dump($this->_classParams["messages"] ?? []);
-
-        // die();
+        
         parent::view("index", $data);
       
     }
