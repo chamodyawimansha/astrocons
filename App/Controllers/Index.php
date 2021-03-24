@@ -28,32 +28,38 @@ use \Framework\Libraries\CSRF as CSRF;
 class Index extends Controller
 {
     private $_helpers;
+    private $_classParams;
 
     /**
      * Loads when object called
-     *
+     * 
      * @return void
      */
     public function __construct()
     {
         $this->_helpers = parent::helpers(["demo"]);
-        
-        // check the session here for data
-
+        $this->_classParams = $_SESSION['index'] ?? [];
     }
 
     /**
      * Index function
      *
+     * @param $params - Url parameters
+     * 
      * @return void
      */
-    public function index()
+    public function index($params = [])
     {
+
         $data = [
             "demo" => $this->_helpers["demo"]("Hello! World."),
             "contact_csrf" => CSRF::new("contact_csrf"),
+            "messages" => $this->_classParams["messages"] ?? []
         ];
 
+        var_dump($this->_classParams["messages"] ?? []);
+
+        // die();
         parent::view("index", $data);
       
     }

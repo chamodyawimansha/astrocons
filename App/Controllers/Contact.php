@@ -48,6 +48,7 @@ class Contact extends Controller
      */
     public function new()
     {
+
         // check for request type
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             // if not a post request
@@ -100,19 +101,14 @@ class Contact extends Controller
 
         $form = new ContactForm($name, $email, $subject, $message);
 
-
-        ////////////////////////////////////////////////////////////////////
-
-        // Edit this for more informative message
-
         if ($form->send($confirmation)) {
-            header("Location:/");
+            // emails sended successfully
+            $data = [];
+            return parent::view("thankyou", $data);
         } else {
-            header("Location:/");
+            // email sending failed
+            $data = [];
+            return parent::view("failed", $data);
         }
-
-
-        ////////////////////////////////////////////////////////////////////
-
     }
 }
