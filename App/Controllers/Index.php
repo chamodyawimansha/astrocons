@@ -37,6 +37,9 @@ class Index extends Controller
     public function __construct()
     {
         $this->_helpers = parent::helpers(["demo"]);
+        
+        // check the session here for data
+
     }
 
     /**
