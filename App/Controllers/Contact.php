@@ -65,18 +65,18 @@ class Contact extends Controller
         }
 
         // check if the user has send a message previously
-        // if (isset($_SESSION["message_time"])) {
-        //     parent::redirect(
-        //         "index/index/#contact",
-        //         [
-        //             "index_contact_alert" => [
-        //                 "type" => "warning",
-        //                 "message" => "Our system indicates that you have recently
-        //                              send us a message.Please try again later."
-        //             ]
-        //         ],
-        //     );
-        // }
+        if (isset($_SESSION["message_time"])) {
+            parent::redirect(
+                "index/index/#contact",
+                [
+                    "index_contact_alert" => [
+                        "type" => "warning",
+                        "message" => "Our system indicates that you have recently
+                                     send us a message.Please try again later."
+                    ]
+                ],
+            );
+        }
 
         $token = filter_var($_POST['contact_csrf'] ?? "", FILTER_SANITIZE_STRING);
 
@@ -111,7 +111,7 @@ class Contact extends Controller
                         "type" => "success",
                         "message" => "Thank you for getting in touch, 
                                      We appreciate you contacting us. 
-                                     We will get back in touch with you soon"
+                                     We will get back in touch with you soon."
                     ]
                 ],
             );
@@ -124,7 +124,7 @@ class Contact extends Controller
                     "index_contact_alert" => [
                         "type" => "failed",
                         "message" => "It seems like there is an issue with your 
-                                     message reaching us. please try again shortly!"
+                                     message reaching us. please try again shortly!."
                     ]
                 ],
             );
