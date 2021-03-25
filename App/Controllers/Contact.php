@@ -104,22 +104,21 @@ class Contact extends Controller
 
         if ($form->send($confirmation)) {
             // emails sended successfully
-            parent::redirect(
+            return parent::redirect(
                 "index/index/#contact",
                 [
                     "index_contact_alert" => [
                         "type" => "success",
                         "message" => "Thank you for getting in touch, 
                                      We appreciate you contacting us. 
-                                     One of our colleagues will get back 
-                                     in touch with you soon!"
+                                     We will get back in touch with you soon"
                     ]
                 ],
             );
             
         } else {
             // email sending failed
-            parent::redirect(
+            return parent::redirect(
                 "index/index/#contact",
                 [
                     "index_contact_alert" => [

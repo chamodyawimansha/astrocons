@@ -24,3 +24,26 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+
+.alert {
+  padding: 50px 50px;
+  margin: 50px;
+}
+
+.alert p {
+  font-weight: 600;
+}
+
+.success {
+  background-color: #3a833c;
+}
+
+.warning {
+  color: var(--dark-color);
+  background-color: var(--primary-color);
+}
+
+.danger {
+  color: #fff;
+  background-color: var(--secondary-color);
+}

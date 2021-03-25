@@ -331,7 +331,11 @@
                             <input type="submit" class="submit-button" value="Send">
                         </form>
                     <?php else: ?>
-                        hello
+                        <div 
+                        class="alert <?php echo $data["contact_alert"]["type"];?>">
+
+                            <p><?php echo $data["contact_alert"]["message"]; ?><p>
+                        </div>
                     <?php endif; ?>
                 </div>
             </div>
