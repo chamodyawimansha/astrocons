@@ -135,8 +135,12 @@ class Controller
      */
     protected function getParams($key)
     {   
-        if (!isset($_SESSION["params"][$key])) {
-            return $_SESSION["params"][$key]; 
+        if (isset($_SESSION["params"][$key])) {
+            $param = $_SESSION["params"][$key]; 
+            // clears the data in session after retrieved.
+            $_SESSION["params"][$key] = "";
+
+            return $param;
         } 
         
         return [];

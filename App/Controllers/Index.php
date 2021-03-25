@@ -47,13 +47,14 @@ class Index extends Controller
      * @return void
      */
     public function index($params = [])
-    {
-
+    {   
+  
         $data = [
             "demo" => $this->_helpers["demo"]("Hello! World."),
             "contact_csrf" => CSRF::new("contact_csrf"),
+            "contact_alert" => parent::getParams("index_contact_alert")
         ];
-        
+
         return parent::view("index", $data);
     }
 }

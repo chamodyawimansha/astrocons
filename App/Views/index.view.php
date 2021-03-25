@@ -299,32 +299,40 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form action="/contact/new" method="post">
-                        <input type="text" name="name" placeholder="Name" required>
-                        <div class="form-group">
-                            <input type="email" 
-                                    name="email" placeholder="Email" required>
-                            <p class="small">We don't keep your email address.<p>
-                        </div>
-                        <input type="text" 
-                                name="subject" placeholder="Subject" required>
-                        <input type="hidden" 
-                               name="contact_csrf" 
-                               value="<?php echo $data["contact_csrf"]; ?>"
-                        >
-                        <input type="text" name="full_name" placeholder="Full Name">
-                        <textarea 
-                            name="message" 
-                            placeholder="Your Message" required></textarea>
-                        <div class="form-group">
-                            <input type="checkbox" 
-                               id="confirmation" name="confirm-email" 
-                               value="1">
-                            <label for="confirmation"> Send me a Confirmation.</label>
-                        </div>
 
-                        <input type="submit" class="submit-button" value="Send">
-                    </form>
+                    <?php if (empty($data["contact_alert"])) : ?>
+                        <form action="/contact/new" method="post">
+                            <input type="text" name="name" placeholder="Name" 
+                                   required>
+                            <div class="form-group">
+                                <input type="email" 
+                                        name="email" placeholder="Email" required>
+                                <p class="small">We don't keep your email address.<p>
+                            </div>
+                            <input type="text" 
+                                    name="subject" placeholder="Subject" required>
+                            <input type="hidden" 
+                                name="contact_csrf" 
+                                value="<?php echo $data["contact_csrf"]; ?>"
+                            >
+                            <input type="text" name="full_name" 
+                                   placeholder="Full Name">
+                            <textarea 
+                                name="message" 
+                                placeholder="Your Message" required></textarea>
+                            <div class="form-group">
+                                <input type="checkbox" 
+                                id="confirmation" name="confirm-email" 
+                                value="1">
+                                <label for="confirmation"> 
+                                    Send me a Confirmation.
+                                </label>
+                            </div>
+                            <input type="submit" class="submit-button" value="Send">
+                        </form>
+                    <?php else: ?>
+                        hello
+                    <?php endif; ?>
                 </div>
             </div>
 
