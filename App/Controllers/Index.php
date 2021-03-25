@@ -53,10 +53,6 @@ class Index extends Controller
             "demo" => $this->_helpers["demo"]("Hello! World."),
             "contact_csrf" => CSRF::new("contact_csrf"),
         ];
-
-        parent::redirect("index/index", ["test" => "test data"]);
-
-        // parent::getParams("test");
         
         return parent::view("index", $data);
     }

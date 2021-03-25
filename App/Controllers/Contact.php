@@ -64,18 +64,19 @@ class Contact extends Controller
             die();
         }
 
-        ////////////////////////////////////////////////////////////////////////////////////////
-
-        // Edit Redirect create redirect function function(controller/method/);
-
-        // create method to pass messages ("which controller should i show the message and action", "message type", "message")
-
-        // // check if the user has send a message previously
+        // check if the user has send a message previously
         // if (isset($_SESSION["message_time"])) {
-        //     echo "YES";
+        //     parent::redirect(
+        //         "index/index/#contact",
+        //         [
+        //             "index_alert" => [
+        //                 "type" => "warning",
+        //                 "message" => "Our system indicates that you have recently
+        //                              send us a message.Please try again later."
+        //             ]
+        //         ],
+        //     );
         // }
-
-        ///////////////////////////////////////////////////////////////////////////////////////
 
         $token = filter_var($_POST['contact_csrf'] ?? "", FILTER_SANITIZE_STRING);
 
@@ -103,10 +104,31 @@ class Contact extends Controller
 
         if ($form->send($confirmation)) {
             // emails sended successfully
+            parent::redirect(
+                "index/index/#contact",
+                [
+                    "index_alert" => [
+                        "type" => "success",
+                        "message" => "Thank you for getting in touch! 
+                                     We appreciate you contacting us. 
+                                     One of our colleagues will get back 
+                                     in touch with you soon!"
+                    ]
+                ],
+            );
             
         } else {
             // email sending failed
-            
+            parent::redirect(
+                "index/index/#contact",
+                [
+                    "index_alert" => [
+                        "type" => "failed",
+                        "message" => "It seems like there is an issue with your 
+                                     message reaching us. please try again shortly!"
+                    ]
+                ],
+            );
         }
     }
 }
