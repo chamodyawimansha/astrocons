@@ -65,14 +65,15 @@ class Contact extends Controller
         }
 
         // check if the user has send a message previously
-        if (isset($_SESSION["message_time"])) {
-            parent::redirect(
+        if (ContactForm::isSpamming()) {
+            return parent::redirect(
                 "index/index/#contact",
                 [
                     "index_contact_alert" => [
                         "type" => "warning",
-                        "message" => "Our system indicates that you have recently
-                                     send us a message.Please try again later."
+                        "message" => "Our system indicates that you have
+                                     send us more than 5 messages. Please try 
+                                     again later."
                     ]
                 ],
             );

@@ -48,7 +48,6 @@ class Index extends Controller
      */
     public function index($params = [])
     {   
-  
         $data = [
             "demo" => $this->_helpers["demo"]("Hello! World."),
             "contact_csrf" => CSRF::new("contact_csrf"),

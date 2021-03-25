@@ -257,9 +257,21 @@ class ContactForm
      */
     private function _save()
     {   
-        if (!isset($_SESSION["message_time"])) {
-            $_SESSION["message_time"] = date('Y-m-d H:i:s');
+        $_SESSION["message_times"] += 1;
+    }
+
+    /**
+     * Stop sending more than 5 messages
+     * 
+     * @return void
+     */
+    public function isSpamming()
+    {   
+        if (isset($_SESSION["message_times"]) && $_SESSION["message_times"] >= 5) {
+            return true;
         }
+
+        return false;
     }
 
     /**
