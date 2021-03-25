@@ -106,13 +106,39 @@ class Controller
     /**
      * Redirect to controllers with data
      * 
-     * @param $route    - controller/method
-     * @param $passings - data to send 
+     * @param $route  - controller/method
+     * @param $params - data to send 
      * 
      * @return Controller
      */
-    protected function redirect($route = "index/index", $passings = [])
+    protected function redirect($route = "index/index", $params = [])
     {   
-        header("Location:/".$route);
+        if (!isset($_SESSION["params"])) {
+            $_SESSION["params"] = [];
+        }
+        // save the data on the session with the key
+        array_walk(
+            $params, function ($value, $key) { 
+                $_SESSION["params"][$key] = $value;
+            }
+        );
+
+        return header("Location:/".$route);
+    }
+
+    /**
+     *  Returns data from the session and release the data
+     * 
+     * @param $key - parameter key
+     * 
+     * @return Controller
+     */
+    protected function getParams($key)
+    {   
+        if (!isset($_SESSION["params"][$key])) {
+            return $_SESSION["params"][$key]; 
+        } 
+        
+        return [];
     }
 }

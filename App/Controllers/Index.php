@@ -28,7 +28,6 @@ use \Framework\Libraries\CSRF as CSRF;
 class Index extends Controller
 {
     private $_helpers;
-    private $_classParams;
 
     /**
      * Loads when object called
@@ -38,7 +37,6 @@ class Index extends Controller
     public function __construct()
     {
         $this->_helpers = parent::helpers(["demo"]);
-        $this->_classParams = $_SESSION['index'] ?? [];
     }
 
     /**
@@ -54,8 +52,11 @@ class Index extends Controller
         $data = [
             "demo" => $this->_helpers["demo"]("Hello! World."),
             "contact_csrf" => CSRF::new("contact_csrf"),
-            "messages" => $this->_classParams["messages"] ?? []
         ];
+
+        parent::redirect("index/index", ["test" => "test data"]);
+
+        // parent::getParams("test");
         
         return parent::view("index", $data);
     }

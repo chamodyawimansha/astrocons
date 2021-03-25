@@ -103,12 +103,10 @@ class Contact extends Controller
 
         if ($form->send($confirmation)) {
             // emails sended successfully
-            $data = [];
-            return parent::view("thankyou", $data);
+            
         } else {
             // email sending failed
-            $data = [];
-            return parent::view("failed", $data);
+            
         }
     }
 }
