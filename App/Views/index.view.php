@@ -356,6 +356,16 @@
         </div>
     </section>
 
+    <section id="gdpr" class="">
+        <p>
+            This website uses essential cookies to improve your experience. 
+            We'll assume you're ok with this
+        </p>
+        <button class="gdpr-button" onclick="hideGDPR()">
+            OK
+        </button> 
+    </section>
+
 <?php
  require VIEW_FOLDER . "partials/footer.php";
 ?>

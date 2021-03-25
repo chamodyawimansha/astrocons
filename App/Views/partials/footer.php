@@ -24,5 +24,6 @@
             <a href="#intro" class="go-top-btn">Top</a>
         </div>
     </footer>
+    <script src="/public/scripts/js.js"></script>
 </body>
 </html>
