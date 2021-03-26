@@ -13,7 +13,13 @@
  require VIEW_FOLDER . "partials/header.php";
 ?>
 
-
+    <div class="image-overlay" onclick="closeOverlay(this)">
+        <img 
+            src="/public/images/projects/project-image-4-sm.jpg" 
+            id="overlay-image"
+        >
+        <!-- <a class="overlay-close-button">Close</a> -->
+    </div>
     <section id="intro">
         <div class="overlay flex">
             <div class="select-off">
@@ -106,51 +112,75 @@
                 <img 
                     src="/public/images/projects/project-image-2-sm.jpg" 
                     alt="Project Image 2"
+                    class="gallery-image"
+                    onclick="openImage(this.src)"
                 >
                 <img 
                     src="/public/images/projects/project-image-1-sm.jpg" 
                     alt="Project Image 1"
+                    class="gallery-image"
+                    onclick="openImage(this.src)"
                 >
                 <img 
                     src="/public/images/projects/project-image-3-sm.jpg" 
                     alt="Project Image 3"
+                    class="gallery-image"
+                    onclick="openImage(this.src)"
                 >
                 <img 
                     src="/public/images/projects/project-image-4-sm.jpg" 
                     alt="Project Image 4"
+                    class="gallery-image"
+                    onclick="openImage(this.src)"
                 >
                 <img 
                     src="/public/images/projects/project-image-5-sm.jpg" 
                     alt="Project Image 5"
+                    class="gallery-image"
+                    onclick="openImage(this.src)"
                 >
                 <img 
                     src="/public/images/projects/project-image-6-sm.jpg" 
                     alt="Project Image 6"
+                    class="gallery-image"
+                    onclick="openImage(this.src)"
                 >
                 <img 
                     src="/public/images/projects/project-image-1-sm.jpg" 
                     alt="Project Image 7"
+                    class="gallery-image"
+                    onclick="openImage(this.src)"
                 >
                 <img 
                     src="/public/images/projects/project-image-8-sm.jpg" 
+                    class="gallery-image"
                     alt="Project Image 8"
+                    onclick="openImage(this.src)"
                 >
                 <img 
                     src="/public/images/projects/project-image-4-sm.jpg" 
+                    class="gallery-image"
                     alt="Project Image 9"
+                    onclick="openImage(this.src)"
                 >
                 <img 
                     src="/public/images/projects/project-image-5-sm.jpg" 
-                    alt="Project Image 10
-                ">
+                    class="gallery-image"
+                    alt="Project Image 10"
+                    onclick="openImage(this.src)"
+                >
                 <img 
                     src="/public/images/projects/project-image-6-sm.jpg" 
-                    alt="Project Image 11
-                ">
+                    class="gallery-image"
+                    alt="Project Image 11"
+                    onclick="openImage(this.src)"
+                >
                 <img 
                     src="/public/images/projects/project-image-3-sm.jpg" 
-                    alt="Project Image 12
-                ">
+                    class="gallery-image"
+                    alt="Project Image 12"
+                    onclick="openImage(this.src)"
+                >
             </div>
         </div>
     </section>
